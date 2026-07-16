@@ -1,0 +1,35 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Financial Performance for MSFT: Normal vs Under Attack}
+\label{tab:financial_performance_msft}
+\begin{tabular}{l|rrrr}
+\toprule
+\textbf{Condition} & \textbf{CR (\%)} & \textbf{AR (\%)} & \textbf{SR} & \textbf{MDD (\%)} \\
+\midrule
+\multicolumn{5}{l}{\textit{Normal Environment}} \\
+\midrule
+B\&H & -9.32 & -34.16 & -1.581 & -15.13 \\
+MACD & -5.25 & -20.58 & -1.180 & -8.34 \\
+\textbf{Ours} & \textbf{-0.50} & \textbf{-2.12} & -2.054 & \textbf{-1.12} \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Single Attack}} \\
+\midrule
+Data Poisoning & -8.82 & -32.14 & -1.992 & -12.21 \\
+Indirect Injection & -3.85 & -15.19 & -0.647 & -10.75 \\
+Persuasive Adversary & -7.43 & -27.69 & -1.713 & -12.59 \\
+Objective Hijacking & -4.30 & -16.85 & -0.832 & -11.72 \\
+Jailbreaking (Authority) & -10.27 & -36.57 & -1.636 & -15.89 \\
+Jailbreaking (Hypothetical) & -10.27 & -36.57 & -1.636 & -15.89 \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Combined Attack}} \\
+\midrule
+C1: Insider Collusion & -10.27 & -36.57 & -1.636 & -15.89 \\
+C2: News Risk Bypass & -10.27 & -36.57 & -1.636 & -15.89 \\
+C3: Data Bias & -5.30 & -20.45 & -1.069 & -10.02 \\
+C4: Bias Risk Ignore & -10.27 & -36.57 & -1.636 & -15.89 \\
+C5: Full Chain & -10.27 & -36.57 & -1.636 & -15.89 \\
+C6: Analysis Trade & -2.55 & -10.28 & -0.497 & -8.95 \\
+\bottomrule
+\end{tabular}
+\end{table}

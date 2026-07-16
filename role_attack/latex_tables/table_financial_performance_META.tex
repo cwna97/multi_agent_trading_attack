@@ -1,0 +1,35 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Financial Performance for META: Normal vs Under Attack}
+\label{tab:financial_performance_meta}
+\begin{tabular}{l|rrrr}
+\toprule
+\textbf{Condition} & \textbf{CR (\%)} & \textbf{AR (\%)} & \textbf{SR} & \textbf{MDD (\%)} \\
+\midrule
+\multicolumn{5}{l}{\textit{Normal Environment}} \\
+\midrule
+B\&H & -3.67 & -14.76 & -0.371 & -21.64 \\
+MACD & 3.21 & 14.46 & 0.674 & -12.03 \\
+\textbf{Ours} & \textbf{0.15} & \textbf{0.65} & -1.229 & \textbf{-0.54} \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Single Attack}} \\
+\midrule
+Data Poisoning & 6.42 & 29.85 & 1.620 & -11.37 \\
+Indirect Injection & 1.31 & 5.62 & 0.410 & -6.06 \\
+Persuasive Adversary & 3.99 & 17.85 & 1.009 & -6.08 \\
+Objective Hijacking & 2.99 & 13.15 & 0.640 & -10.05 \\
+Jailbreaking (Authority) & -3.88 & -15.30 & -0.317 & -21.69 \\
+Jailbreaking (Hypothetical) & 0.13 & 0.54 & 0.197 & -20.88 \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Combined Attack}} \\
+\midrule
+C1: Insider Collusion & -6.64 & -25.06 & -0.715 & -21.69 \\
+C2: News Risk Bypass & -3.88 & -15.30 & -0.317 & -21.69 \\
+C3: Data Bias & -1.56 & -6.38 & -0.371 & -7.50 \\
+C4: Bias Risk Ignore & -3.88 & -15.30 & -0.317 & -21.69 \\
+C5: Full Chain & -3.88 & -15.30 & -0.317 & -21.69 \\
+C6: Analysis Trade & -0.70 & -2.91 & -0.159 & -7.89 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,35 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Financial Performance Comparison: Normal vs Under Attack}
+\label{tab:financial_performance}
+\begin{tabular}{l|rrrr}
+\toprule
+\textbf{Condition} & \textbf{CR (\%)} & \textbf{AR (\%)} & \textbf{SR} & \textbf{MDD (\%)} \\
+\midrule
+\multicolumn{5}{l}{\textit{Normal Environment}} \\
+\midrule
+B\&H & -15.10 & -47.16 & -1.580 & -24.85 \\
+MACD & -7.04 & -17.25 & -1.029 & -13.52 \\
+\textbf{Ours} & \textbf{-0.69} & \textbf{-2.88} & -1.906 & \textbf{-1.30} \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Single Attack}} \\
+\midrule
+Data Poisoning & -11.34 & -33.83 & -1.959 & -17.60 \\
+Indirect Injection & -7.10 & -23.84 & -1.334 & -11.85 \\
+Persuasive Adversary & -9.10 & -27.44 & -1.381 & -14.62 \\
+Objective Hijacking & -11.69 & -32.08 & -1.844 & -16.09 \\
+Jailbreaking (Authority) & -15.54 & -47.47 & -1.536 & -25.11 \\
+Jailbreaking (Hypothetical) & -15.19 & -45.64 & -1.482 & -25.08 \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Combined Attack}} \\
+\midrule
+C1: Insider Collusion & -15.75 & -48.38 & -1.553 & -25.09 \\
+C2: News Risk Bypass & -15.02 & -46.77 & -1.495 & -25.11 \\
+C3: Data Bias & -7.15 & -20.41 & -0.623 & -12.82 \\
+C4: Bias Risk Ignore & -15.72 & -48.06 & -1.568 & -25.29 \\
+C5: Full Chain & -15.28 & -46.89 & -1.499 & -24.88 \\
+C6: Analysis Trade & -6.85 & -19.02 & -0.744 & -13.83 \\
+\bottomrule
+\end{tabular}
+\end{table}

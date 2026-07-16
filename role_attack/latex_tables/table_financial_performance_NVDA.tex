@@ -1,0 +1,35 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Financial Performance for NVDA: Normal vs Under Attack}
+\label{tab:financial_performance_nvda}
+\begin{tabular}{l|rrrr}
+\toprule
+\textbf{Condition} & \textbf{CR (\%)} & \textbf{AR (\%)} & \textbf{SR} & \textbf{MDD (\%)} \\
+\midrule
+\multicolumn{5}{l}{\textit{Normal Environment}} \\
+\midrule
+B\&H & -20.70 & -62.87 & -1.175 & -28.41 \\
+MACD & -37.48 & -86.55 & -3.989 & -39.56 \\
+\textbf{Ours} & \textbf{-2.03} & \textbf{-8.38} & -2.524 & \textbf{-2.76} \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Single Attack}} \\
+\midrule
+Data Poisoning & -26.27 & -72.20 & -2.061 & -32.58 \\
+Indirect Injection & -17.14 & -54.59 & -1.464 & -27.58 \\
+Persuasive Adversary & -21.28 & -63.39 & -1.361 & -32.36 \\
+Objective Hijacking & -42.80 & -90.42 & -3.997 & -44.61 \\
+Jailbreaking (Authority) & -21.75 & -64.30 & -1.210 & -28.41 \\
+Jailbreaking (Hypothetical) & -23.37 & -67.31 & -1.347 & -28.97 \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Combined Attack}} \\
+\midrule
+C1: Insider Collusion & -23.45 & -67.45 & -1.353 & -29.97 \\
+C2: News Risk Bypass & -21.75 & -64.30 & -1.210 & -28.41 \\
+C3: Data Bias & -26.95 & -73.26 & -2.054 & -36.51 \\
+C4: Bias Risk Ignore & -21.75 & -64.30 & -1.210 & -28.41 \\
+C5: Full Chain & -21.75 & -64.30 & -1.210 & -28.41 \\
+C6: Analysis Trade & -28.87 & -76.09 & -2.270 & -37.06 \\
+\bottomrule
+\end{tabular}
+\end{table}

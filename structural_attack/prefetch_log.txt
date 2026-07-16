@@ -1,0 +1,845 @@
+============================================================
+Data Prefetch Script
+============================================================
+Tickers: AAPL, NVDA, MSFT, AMZN, TSLA, GOOGL, META
+Period: 2024-01-01 to 2025-12-31
+Data directory: /home/iislab/workspace/nacw/multi_agents/attack_trading_agents/tradingagents/dataflows/local_data
+============================================================
+Starting...:   0%|          | 0/28 [00:00<?, ?task/s]AAPL [1/4] stock_data:   0%|          | 0/28 [00:00<?, ?task/s]                                                               AAPL [1/4] stock_data:   0%|          | 0/28 [00:00<?, ?task/s]                                                               AAPL [1/4] stock_data:   0%|          | 0/28 [00:00<?, ?task/s]AAPL [1/4] stock_data:   4%|▎         | 1/28 [00:00<00:22,  1.19task/s]AAPL [2/4] indicators:   4%|▎         | 1/28 [00:00<00:22,  1.19task/s]                                                                       AAPL [2/4] indicators:   4%|▎         | 1/28 [00:00<00:22,  1.19task/s]                                                                       AAPL [2/4] indicators:   4%|▎         | 1/28 [00:00<00:22,  1.19task/s]AAPL [3/4] fundamentals:   7%|▋         | 2/28 [00:00<00:21,  1.19task/s]                                                                         AAPL [3/4] fundamentals:   7%|▋         | 2/28 [00:00<00:21,  1.19task/s]                                                                         AAPL [3/4] fundamentals:   7%|▋         | 2/28 [00:02<00:21,  1.19task/s]AAPL [3/4] fundamentals:  11%|█         | 3/28 [00:02<00:20,  1.21task/s]AAPL [4/4] news:  11%|█         | 3/28 [00:02<00:20,  1.21task/s]                                                                         AAPL [4/4] news:  11%|█         | 3/28 [00:02<00:20,  1.21task/s]/home/iislab/workspace/nacw/multi_agents/attack_trading_agents/.venv/lib/python3.10/site-packages/gnews/gnews.py:130: UserWarning: The start and end dates should be at least 1 day apart, or GNews will return no results
+  warnings.warn("The start and end dates should be at least 1 day apart, or GNews will return no results")
+                                                                 AAPL [4/4] news:  11%|█         | 3/28 [43:44<00:20,  1.21task/s]AAPL [4/4] news:  14%|█▍        | 4/28 [43:44<6:03:10, 907.93s/task]                                                                    AAPL [4/4] news:  14%|█▍        | 4/28 [43:44<6:03:10, 907.93s/task]NVDA [1/4] stock_data:  14%|█▍        | 4/28 [43:44<6:03:10, 907.93s/task]                                                                          NVDA [1/4] stock_data:  14%|█▍        | 4/28 [43:44<6:03:10, 907.93s/task]                                                                          NVDA [1/4] stock_data:  14%|█▍        | 4/28 [43:45<6:03:10, 907.93s/task]NVDA [1/4] stock_data:  18%|█▊        | 5/28 [43:45<3:52:57, 607.73s/task]NVDA [2/4] indicators:  18%|█▊        | 5/28 [43:45<3:52:57, 607.73s/task]                                                                          NVDA [2/4] indicators:  18%|█▊        | 5/28 [43:45<3:52:57, 607.73s/task]                                                                          NVDA [2/4] indicators:  18%|█▊        | 5/28 [43:45<3:52:57, 607.73s/task]NVDA [3/4] fundamentals:  21%|██▏       | 6/28 [43:45<3:42:49, 607.73s/task]                                                                            NVDA [3/4] fundamentals:  21%|██▏       | 6/28 [43:45<3:42:49, 607.73s/task]                                                                            NVDA [3/4] fundamentals:  21%|██▏       | 6/28 [43:47<3:42:49, 607.73s/task]NVDA [3/4] fundamentals:  25%|██▌       | 7/28 [43:47<1:49:32, 312.98s/task]NVDA [4/4] news:  25%|██▌       | 7/28 [43:47<1:49:32, 312.98s/task]                                                                            NVDA [4/4] news:  25%|██▌       | 7/28 [43:47<1:49:32, 312.98s/task]/home/iislab/workspace/nacw/multi_agents/attack_trading_agents/.venv/lib/python3.10/site-packages/gnews/gnews.py:130: UserWarning: The start and end dates should be at least 1 day apart, or GNews will return no results
+  warnings.warn("The start and end dates should be at least 1 day apart, or GNews will return no results")
+  [Stock Data] Downloading AAPL...
+    ✓ Saved 751 rows to AAPL-YFin-data-2023-01-01-2025-12-31.csv
+  [Indicators] Calculating for AAPL...
+    ✓ Saved 501 days of indicators to AAPL_indicators.json
+  [Fundamentals] Downloading for AAPL...
+    ✓ Saved 7 files for AAPL
+  [News] Downloading for AAPL...
+  Fetching 731 days of news...
+    [7/731] days processed, 29 articles so far
+    [14/731] days processed, 48 articles so far
+    [21/731] days processed, 80 articles so far
+    [28/731] days processed, 112 articles so far
+    [35/731] days processed, 150 articles so far
+    [42/731] days processed, 175 articles so far
+    [49/731] days processed, 204 articles so far
+    [56/731] days processed, 228 articles so far
+    [63/731] days processed, 262 articles so far
+    [70/731] days processed, 285 articles so far
+    [77/731] days processed, 311 articles so far
+    [84/731] days processed, 343 articles so far
+    [91/731] days processed, 365 articles so far
+    [98/731] days processed, 392 articles so far
+    [105/731] days processed, 421 articles so far
+    [112/731] days processed, 448 articles so far
+    [119/731] days processed, 477 articles so far
+    [126/731] days processed, 512 articles so far
+    [133/731] days processed, 542 articles so far
+    [140/731] days processed, 566 articles so far
+    [147/731] days processed, 589 articles so far
+    [154/731] days processed, 613 articles so far
+    [161/731] days processed, 645 articles so far
+    [168/731] days processed, 682 articles so far
+    [175/731] days processed, 719 articles so far
+    [182/731] days processed, 743 articles so far
+    [189/731] days processed, 768 articles so far
+    [196/731] days processed, 802 articles so far
+    [203/731] days processed, 823 articles so far
+    [210/731] days processed, 848 articles so far
+    [217/731] days processed, 885 articles so far
+    [224/731] days processed, 919 articles so far
+    [231/731] days processed, 951 articles so far
+    [238/731] days processed, 975 articles so far
+    [245/731] days processed, 1003 articles so far
+    [252/731] days processed, 1040 articles so far
+    [259/731] days processed, 1077 articles so far
+    [266/731] days processed, 1113 articles so far
+    [273/731] days processed, 1141 articles so far
+    [280/731] days processed, 1176 articles so far
+    [287/731] days processed, 1206 articles so far
+    [294/731] days processed, 1239 articles so far
+    [301/731] days processed, 1275 articles so far
+    [308/731] days processed, 1310 articles so far
+    [315/731] days processed, 1338 articles so far
+    [322/731] days processed, 1376 articles so far
+    [329/731] days processed, 1409 articles so far
+    [336/731] days processed, 1445 articles so far
+    [343/731] days processed, 1481 articles so far
+    [350/731] days processed, 1523 articles so far
+    [357/731] days processed, 1560 articles so far
+    [364/731] days processed, 1598 articles so far
+    [371/731] days processed, 1638 articles so far
+    [378/731] days processed, 1683 articles so far
+    [385/731] days processed, 1722 articles so far
+    [392/731] days processed, 1761 articles so far
+    [399/731] days processed, 1812 articles so far
+    [406/731] days processed, 1847 articles so far
+    [413/731] days processed, 1889 articles so far
+    [420/731] days processed, 1923 articles so far
+    [427/731] days processed, 1960 articles so far
+    [434/731] days processed, 1996 articles so far
+    [441/731] days processed, 2036 articles so far
+    [448/731] days processed, 2083 articles so far
+    [455/731] days processed, 2120 articles so far
+    [462/731] days processed, 2175 articles so far
+    [469/731] days processed, 2247 articles so far
+    [476/731] days processed, 2280 articles so far
+    [483/731] days processed, 2320 articles so far
+    [490/731] days processed, 2388 articles so far
+    [497/731] days processed, 2434 articles so far
+    [504/731] days processed, 2475 articles so far
+    [511/731] days processed, 2525 articles so far
+    [518/731] days processed, 2574 articles so far
+    [525/731] days processed, 2616 articles so far
+    [532/731] days processed, 2655 articles so far
+    [539/731] days processed, 2696 articles so far
+    [546/731] days processed, 2757 articles so far
+    [553/731] days processed, 2804 articles so far
+    [560/731] days processed, 2862 articles so far
+    [567/731] days processed, 2901 articles so far
+    [574/731] days processed, 2952 articles so far
+    [581/731] days processed, 3074 articles so far
+    [588/731] days processed, 3166 articles so far
+    [595/731] days processed, 3236 articles so far
+    [602/731] days processed, 3283 articles so far
+    [609/731] days processed, 3361 articles so far
+    [616/731] days processed, 3464 articles so far
+    [623/731] days processed, 3562 articles so far
+    [630/731] days processed, 3667 articles so far
+    [637/731] days processed, 3743 articles so far
+    [644/731] days processed, 3805 articles so far
+    [651/731] days processed, 3854 articles so far
+    [658/731] days processed, 3953 articles so far
+    [665/731] days processed, 4045 articles so far
+    [672/731] days processed, 4219 articles so far
+    [679/731] days processed, 4299 articles so far
+    [686/731] days processed, 4384 articles so far
+    [693/731] days processed, 4463 articles so far
+    [700/731] days processed, 4545 articles so far
+    [707/731] days processed, 4650 articles so far
+    [714/731] days processed, 4755 articles so far
+    [721/731] days processed, 4937 articles so far
+    [728/731] days processed, 5111 articles so far
+  Done: 5222 total articles
+    ✓ Saved 5222 articles (723 days) to AAPL_news.json
+  ✓ AAPL completed (1/7)
+  [Stock Data] Downloading NVDA...
+    ✓ Saved 751 rows to NVDA-YFin-data-2023-01-01-2025-12-31.csv
+  [Indicators] Calculating for NVDA...
+    ✓ Saved 501 days of indicators to NVDA_indicators.json
+  [Fundamentals] Downloading for NVDA...
+    ✓ Saved 7 files for NVDA
+  [News] Downloading for NVDA...
+  Fetching 731 days of news...
+    [7/731] days processed, 38 articles so far
+    [14/731] days processed, 68 articles so far
+    [21/731] days processed, 98 articles so far
+    [28/731] days processed, 125 articles so far
+    [35/731] days processed, 161 articles so far
+    [42/731] days processed, 193 articles so far
+    [49/731] days processed, 227 articles so far
+    [56/731] days processed, 278 articles so far
+    [63/731] days processed, 316 articles so far
+    [70/731] days processed, 352 articles so far
+    [77/731] days processed, 390 articles so far
+    [84/731] days processed, 424 articles so far
+    [91/731] days processed, 459 articles so far
+    [98/731] days processed, 487 articles so far
+    [105/731] days processed, 529 articles so far
+    [112/731] days processed, 556 articles so far
+    [119/731] days processed, 585 articles so far
+    [126/731] days processed, 615 articles so far
+    [133/731] days processed, 641 articles so far
+    [140/731] days processed, 676 articles so far
+    [147/731] days processed, 718 articles so far
+    [154/731] days processed, 758 articles so far
+    [161/731] days processed, 800 articles so far
+    [168/731] days processed, 840 articles so far
+    [175/731] days processed, 884 articles so far
+    [182/731] days processed, 922 articles so far
+    [189/731] days processed, 967 articles so far
+    [196/731] days processed, 1000 articles so far
+    [203/731] days processed, 1034 articles so far
+    [210/731] days processed, 1068 articles so far
+    [217/731] days processed, 1107 articles so far
+    [224/731] days processed, 1145 articles so far
+    [231/731] days processed, 1179 articles so far
+    [238/731] days processed, 1221 articles so far
+    [245/731] days processed, 1272 articles so far
+    [252/731] days processed, 1316 articles so far
+    [259/731] days processed, 1352 articles so far
+    [266/731] days processed, 1390 articles so far
+    [273/731] days processed, 1426 articles so far
+    [280/731] days processed, 1462 articles so far
+    [287/731] days processed, 1505 articles so far
+    [294/731] days processed, 1548 articles so far
+    [301/731] days processed, 1588 articles so far
+                                                                    NVDA [4/4] news:  25%|██▌       | 7/28 [1:51:33<1:49:32, 312.98s/task]NVDA [4/4] news:  29%|██▊       | 8/28 [1:51:33<7:06:37, 1279.89s/task]                                                                       NVDA [4/4] news:  29%|██▊       | 8/28 [1:51:33<7:06:37, 1279.89s/task]MSFT [1/4] stock_data:  29%|██▊       | 8/28 [1:51:33<7:06:37, 1279.89s/task]                                                                             MSFT [1/4] stock_data:  29%|██▊       | 8/28 [1:51:33<7:06:37, 1279.89s/task]                                                                             MSFT [1/4] stock_data:  29%|██▊       | 8/28 [1:51:33<7:06:37, 1279.89s/task]MSFT [1/4] stock_data:  32%|███▏      | 9/28 [1:51:33<4:56:17, 935.66s/task] MSFT [2/4] indicators:  32%|███▏      | 9/28 [1:51:33<4:56:17, 935.66s/task]                                                                            MSFT [2/4] indicators:  32%|███▏      | 9/28 [1:51:33<4:56:17, 935.66s/task]                                                                            MSFT [2/4] indicators:  32%|███▏      | 9/28 [1:51:33<4:56:17, 935.66s/task]MSFT [3/4] fundamentals:  36%|███▌      | 10/28 [1:51:33<4:40:41, 935.66s/task]                                                                               MSFT [3/4] fundamentals:  36%|███▌      | 10/28 [1:51:33<4:40:41, 935.66s/task]                                                                               MSFT [3/4] fundamentals:  36%|███▌      | 10/28 [1:51:36<4:40:41, 935.66s/task]MSFT [3/4] fundamentals:  39%|███▉      | 11/28 [1:51:36<2:30:02, 529.53s/task]MSFT [4/4] news:  39%|███▉      | 11/28 [1:51:36<2:30:02, 529.53s/task]                                                                               MSFT [4/4] news:  39%|███▉      | 11/28 [1:51:36<2:30:02, 529.53s/task]/home/iislab/workspace/nacw/multi_agents/attack_trading_agents/.venv/lib/python3.10/site-packages/gnews/gnews.py:130: UserWarning: The start and end dates should be at least 1 day apart, or GNews will return no results
+  warnings.warn("The start and end dates should be at least 1 day apart, or GNews will return no results")
+    [308/731] days processed, 1623 articles so far
+    [315/731] days processed, 1658 articles so far
+    [322/731] days processed, 1705 articles so far
+    [329/731] days processed, 1783 articles so far
+    [336/731] days processed, 1828 articles so far
+    [343/731] days processed, 1868 articles so far
+    [350/731] days processed, 1916 articles so far
+    [357/731] days processed, 1960 articles so far
+    [364/731] days processed, 2006 articles so far
+    [371/731] days processed, 2056 articles so far
+    [378/731] days processed, 2111 articles so far
+    [385/731] days processed, 2146 articles so far
+    [392/731] days processed, 2224 articles so far
+    [399/731] days processed, 2294 articles so far
+    [406/731] days processed, 2339 articles so far
+    [413/731] days processed, 2389 articles so far
+    [420/731] days processed, 2451 articles so far
+    [427/731] days processed, 2575 articles so far
+    [434/731] days processed, 2645 articles so far
+    [441/731] days processed, 2720 articles so far
+    [448/731] days processed, 2789 articles so far
+    [455/731] days processed, 2843 articles so far
+    [462/731] days processed, 2924 articles so far
+    [469/731] days processed, 3004 articles so far
+    [476/731] days processed, 3092 articles so far
+    [483/731] days processed, 3162 articles so far
+    [490/731] days processed, 3215 articles so far
+    [497/731] days processed, 3288 articles so far
+    [504/731] days processed, 3365 articles so far
+    [511/731] days processed, 3458 articles so far
+    [518/731] days processed, 3629 articles so far
+    [525/731] days processed, 3693 articles so far
+    [532/731] days processed, 3753 articles so far
+    [539/731] days processed, 3819 articles so far
+    [546/731] days processed, 3927 articles so far
+    [553/731] days processed, 3997 articles so far
+    [560/731] days processed, 4097 articles so far
+    [567/731] days processed, 4210 articles so far
+    [574/731] days processed, 4285 articles so far
+    [581/731] days processed, 4376 articles so far
+    [588/731] days processed, 4462 articles so far
+    [595/731] days processed, 4552 articles so far
+    [602/731] days processed, 4722 articles so far
+    [609/731] days processed, 4953 articles so far
+    [616/731] days processed, 5097 articles so far
+    [623/731] days processed, 5226 articles so far
+    [630/731] days processed, 5405 articles so far
+    [637/731] days processed, 5556 articles so far
+    [644/731] days processed, 5670 articles so far
+    [651/731] days processed, 5852 articles so far
+    [658/731] days processed, 5995 articles so far
+    [665/731] days processed, 6066 articles so far
+    [672/731] days processed, 6253 articles so far
+    [679/731] days processed, 6394 articles so far
+    [686/731] days processed, 6705 articles so far
+    [693/731] days processed, 7037 articles so far
+    [700/731] days processed, 7265 articles so far
+    [707/731] days processed, 7474 articles so far
+    [714/731] days processed, 7749 articles so far
+    [721/731] days processed, 7995 articles so far
+    [728/731] days processed, 8221 articles so far
+  Done: 8326 total articles
+    ✓ Saved 8326 articles (729 days) to NVDA_news.json
+  ✓ NVDA completed (2/7)
+  [Stock Data] Downloading MSFT...
+    ✓ Saved 751 rows to MSFT-YFin-data-2023-01-01-2025-12-31.csv
+  [Indicators] Calculating for MSFT...
+    ✓ Saved 501 days of indicators to MSFT_indicators.json
+  [Fundamentals] Downloading for MSFT...
+    ✓ Saved 7 files for MSFT
+  [News] Downloading for MSFT...
+  Fetching 731 days of news...
+    [7/731] days processed, 24 articles so far
+    [14/731] days processed, 45 articles so far
+    [21/731] days processed, 70 articles so far
+    [28/731] days processed, 106 articles so far
+    [35/731] days processed, 133 articles so far
+    [42/731] days processed, 155 articles so far
+    [49/731] days processed, 178 articles so far
+    [56/731] days processed, 208 articles so far
+    [63/731] days processed, 240 articles so far
+    [70/731] days processed, 270 articles so far
+    [77/731] days processed, 291 articles so far
+    [84/731] days processed, 317 articles so far
+    [91/731] days processed, 339 articles so far
+    [98/731] days processed, 364 articles so far
+    [105/731] days processed, 391 articles so far
+    [112/731] days processed, 413 articles so far
+    [119/731] days processed, 453 articles so far
+    [126/731] days processed, 486 articles so far
+    [133/731] days processed, 513 articles so far
+    [140/731] days processed, 543 articles so far
+    [147/731] days processed, 562 articles so far
+    [154/731] days processed, 587 articles so far
+    [161/731] days processed, 617 articles so far
+    [168/731] days processed, 643 articles so far
+    [175/731] days processed, 679 articles so far
+    [182/731] days processed, 704 articles so far
+    [189/731] days processed, 730 articles so far
+    [196/731] days processed, 759 articles so far
+    [203/731] days processed, 793 articles so far
+    [210/731] days processed, 817 articles so far
+    [217/731] days processed, 857 articles so far
+    [224/731] days processed, 893 articles so far
+    [231/731] days processed, 915 articles so far
+    [238/731] days processed, 937 articles so far
+    [245/731] days processed, 961 articles so far
+    [252/731] days processed, 988 articles so far
+    [259/731] days processed, 1021 articles so far
+    [266/731] days processed, 1058 articles so far
+    [273/731] days processed, 1084 articles so far
+    [280/731] days processed, 1123 articles so far
+    [287/731] days processed, 1162 articles so far
+    [294/731] days processed, 1200 articles so far
+    [301/731] days processed, 1236 articles so far
+    [308/731] days processed, 1278 articles so far
+    [315/731] days processed, 1311 articles so far
+    [322/731] days processed, 1338 articles so far
+    [329/731] days processed, 1378 articles so far
+    [336/731] days processed, 1414 articles so far
+    [343/731] days processed, 1449 articles so far
+    [350/731] days processed, 1489 articles so far
+    [357/731] days processed, 1527 articles so far
+    [364/731] days processed, 1568 articles so far
+    [371/731] days processed, 1603 articles so far
+    [378/731] days processed, 1641 articles so far
+    [385/731] days processed, 1672 articles so far
+    [392/731] days processed, 1713 articles so far
+    [399/731] days processed, 1770 articles so far
+    [406/731] days processed, 1808 articles so far
+    [413/731] days processed, 1844 articles so far
+    [420/731] days processed, 1890 articles so far
+    [427/731] days processed, 1929 articles so far
+    [434/731] days processed, 1970 articles so far
+    [441/731] days processed, 2013 articles so far
+    [448/731] days processed, 2047 articles so far
+    [455/731] days processed, 2090 articles so far
+    [462/731] days processed, 2126 articles so far
+    [469/731] days processed, 2166 articles so far
+    [476/731] days processed, 2199 articles so far
+    [483/731] days processed, 2238 articles so far
+    [490/731] days processed, 2316 articles so far
+    [497/731] days processed, 2366 articles so far
+    [504/731] days processed, 2403 articles so far
+    [511/731] days processed, 2445 articles so far
+    [518/731] days processed, 2486 articles so far
+    [525/731] days processed, 2533 articles so far
+    [532/731] days processed, 2565 articles so far
+    [539/731] days processed, 2600 articles so far
+    [546/731] days processed, 2655 articles so far
+    [553/731] days processed, 2702 articles so far
+    [560/731] days processed, 2752 articles so far
+    [567/731] days processed, 2790 articles so far
+    [574/731] days processed, 2849 articles so far
+    [581/731] days processed, 2997 articles so far
+    [588/731] days processed, 3051 articles so far
+    [595/731] days processed, 3093 articles so far
+    [602/731] days processed, 3142 articles so far
+    [609/731] days processed, 3207 articles so far
+    [616/731] days processed, 3278 articles so far
+    [623/731] days processed, 3343 articles so far
+    [630/731] days processed, 3425 articles so far
+    [637/731] days processed, 3483 articles so far
+                                                                       MSFT [4/4] news:  39%|███▉      | 11/28 [2:41:01<2:30:02, 529.53s/task]MSFT [4/4] news:  43%|████▎     | 12/28 [2:41:01<4:55:06, 1106.68s/task]                                                                        MSFT [4/4] news:  43%|████▎     | 12/28 [2:41:01<4:55:06, 1106.68s/task]AMZN [1/4] stock_data:  43%|████▎     | 12/28 [2:41:01<4:55:06, 1106.68s/task]                                                                              AMZN [1/4] stock_data:  43%|████▎     | 12/28 [2:41:01<4:55:06, 1106.68s/task]                                                                              AMZN [1/4] stock_data:  43%|████▎     | 12/28 [2:41:02<4:55:06, 1106.68s/task]AMZN [1/4] stock_data:  46%|████▋     | 13/28 [2:41:02<3:26:44, 826.99s/task] AMZN [2/4] indicators:  46%|████▋     | 13/28 [2:41:02<3:26:44, 826.99s/task]                                                                             AMZN [2/4] indicators:  46%|████▋     | 13/28 [2:41:02<3:26:44, 826.99s/task]                                                                             AMZN [2/4] indicators:  46%|████▋     | 13/28 [2:41:02<3:26:44, 826.99s/task]AMZN [3/4] fundamentals:  50%|█████     | 14/28 [2:41:02<3:12:57, 826.99s/task]                                                                               AMZN [3/4] fundamentals:  50%|█████     | 14/28 [2:41:02<3:12:57, 826.99s/task]                                                                               AMZN [3/4] fundamentals:  50%|█████     | 14/28 [2:41:04<3:12:57, 826.99s/task]AMZN [3/4] fundamentals:  54%|█████▎    | 15/28 [2:41:04<1:44:07, 480.58s/task]AMZN [4/4] news:  54%|█████▎    | 15/28 [2:41:04<1:44:07, 480.58s/task]                                                                               AMZN [4/4] news:  54%|█████▎    | 15/28 [2:41:04<1:44:07, 480.58s/task]/home/iislab/workspace/nacw/multi_agents/attack_trading_agents/.venv/lib/python3.10/site-packages/gnews/gnews.py:130: UserWarning: The start and end dates should be at least 1 day apart, or GNews will return no results
+  warnings.warn("The start and end dates should be at least 1 day apart, or GNews will return no results")
+                                                                       AMZN [4/4] news:  54%|█████▎    | 15/28 [6:17:49<1:44:07, 480.58s/task]AMZN [4/4] news:  57%|█████▋    | 16/28 [6:17:49<11:13:33, 3367.75s/task]                                                                         AMZN [4/4] news:  57%|█████▋    | 16/28 [6:17:49<11:13:33, 3367.75s/task]TSLA [1/4] stock_data:  57%|█████▋    | 16/28 [6:17:49<11:13:33, 3367.75s/task]                                                                               TSLA [1/4] stock_data:  57%|█████▋    | 16/28 [6:17:49<11:13:33, 3367.75s/task]                                                                               TSLA [1/4] stock_data:  57%|█████▋    | 16/28 [6:17:49<11:13:33, 3367.75s/task]TSLA [1/4] stock_data:  61%|██████    | 17/28 [6:17:49<7:44:28, 2533.53s/task] TSLA [2/4] indicators:  61%|██████    | 17/28 [6:17:49<7:44:28, 2533.53s/task]                                                                              TSLA [2/4] indicators:  61%|██████    | 17/28 [6:17:49<7:44:28, 2533.53s/task]                                                                              TSLA [2/4] indicators:  61%|██████    | 17/28 [6:17:49<7:44:28, 2533.53s/task]TSLA [3/4] fundamentals:  64%|██████▍   | 18/28 [6:17:49<7:02:15, 2533.53s/task]                                                                                TSLA [3/4] fundamentals:  64%|██████▍   | 18/28 [6:17:49<7:02:15, 2533.53s/task]                                                                                TSLA [3/4] fundamentals:  64%|██████▍   | 18/28 [6:17:52<7:02:15, 2533.53s/task]TSLA [3/4] fundamentals:  68%|██████▊   | 19/28 [6:17:52<3:42:35, 1483.99s/task]TSLA [4/4] news:  68%|██████▊   | 19/28 [6:17:52<3:42:35, 1483.99s/task]                                                                                TSLA [4/4] news:  68%|██████▊   | 19/28 [6:17:52<3:42:35, 1483.99s/task]/home/iislab/workspace/nacw/multi_agents/attack_trading_agents/.venv/lib/python3.10/site-packages/gnews/gnews.py:130: UserWarning: The start and end dates should be at least 1 day apart, or GNews will return no results
+  warnings.warn("The start and end dates should be at least 1 day apart, or GNews will return no results")
+    [644/731] days processed, 3552 articles so far
+    [651/731] days processed, 3616 articles so far
+    [658/731] days processed, 3677 articles so far
+    [665/731] days processed, 3768 articles so far
+    [672/731] days processed, 3969 articles so far
+    [679/731] days processed, 4063 articles so far
+    [686/731] days processed, 4144 articles so far
+    [693/731] days processed, 4240 articles so far
+    [700/731] days processed, 4312 articles so far
+    [707/731] days processed, 4406 articles so far
+    [714/731] days processed, 4530 articles so far
+    [721/731] days processed, 4682 articles so far
+    [728/731] days processed, 4840 articles so far
+  Done: 4921 total articles
+    ✓ Saved 4921 articles (710 days) to MSFT_news.json
+  ✓ MSFT completed (3/7)
+  [Stock Data] Downloading AMZN...
+    ✓ Saved 751 rows to AMZN-YFin-data-2023-01-01-2025-12-31.csv
+  [Indicators] Calculating for AMZN...
+    ✓ Saved 501 days of indicators to AMZN_indicators.json
+  [Fundamentals] Downloading for AMZN...
+    ✓ Saved 7 files for AMZN
+  [News] Downloading for AMZN...
+  Fetching 731 days of news...
+    [7/731] days processed, 169 articles so far
+    [14/731] days processed, 430 articles so far
+    [21/731] days processed, 645 articles so far
+    [28/731] days processed, 926 articles so far
+    [35/731] days processed, 1193 articles so far
+    [42/731] days processed, 1381 articles so far
+    [49/731] days processed, 1588 articles so far
+    [56/731] days processed, 1786 articles so far
+    [63/731] days processed, 1971 articles so far
+    [70/731] days processed, 2144 articles so far
+    [77/731] days processed, 2312 articles so far
+    [84/731] days processed, 2494 articles so far
+    [91/731] days processed, 2708 articles so far
+    [98/731] days processed, 2926 articles so far
+    [105/731] days processed, 3153 articles so far
+    [112/731] days processed, 3366 articles so far
+    [119/731] days processed, 3598 articles so far
+    [126/731] days processed, 3800 articles so far
+    [133/731] days processed, 4006 articles so far
+    [140/731] days processed, 4200 articles so far
+    [147/731] days processed, 4349 articles so far
+    [154/731] days processed, 4568 articles so far
+    [161/731] days processed, 4716 articles so far
+    [168/731] days processed, 4895 articles so far
+    [175/731] days processed, 5134 articles so far
+    [182/731] days processed, 5379 articles so far
+    [189/731] days processed, 5551 articles so far
+    [196/731] days processed, 5824 articles so far
+    [203/731] days processed, 6077 articles so far
+    [210/731] days processed, 6267 articles so far
+    [217/731] days processed, 6507 articles so far
+    [224/731] days processed, 6694 articles so far
+    [231/731] days processed, 6833 articles so far
+    [238/731] days processed, 7005 articles so far
+    [245/731] days processed, 7150 articles so far
+    [252/731] days processed, 7340 articles so far
+    [259/731] days processed, 7606 articles so far
+    [266/731] days processed, 7857 articles so far
+    [273/731] days processed, 8070 articles so far
+    [280/731] days processed, 8304 articles so far
+    [287/731] days processed, 8506 articles so far
+    [294/731] days processed, 8726 articles so far
+    [301/731] days processed, 8908 articles so far
+    [308/731] days processed, 9157 articles so far
+    [315/731] days processed, 9358 articles so far
+    [322/731] days processed, 9614 articles so far
+    [329/731] days processed, 9819 articles so far
+    [336/731] days processed, 9999 articles so far
+    [343/731] days processed, 10268 articles so far
+    [350/731] days processed, 10507 articles so far
+    [357/731] days processed, 10802 articles so far
+    [364/731] days processed, 10894 articles so far
+    [371/731] days processed, 11071 articles so far
+    [378/731] days processed, 11356 articles so far
+    [385/731] days processed, 11607 articles so far
+    [392/731] days processed, 11819 articles so far
+    [399/731] days processed, 12092 articles so far
+    [406/731] days processed, 12380 articles so far
+    [413/731] days processed, 12587 articles so far
+    [420/731] days processed, 12842 articles so far
+    [427/731] days processed, 13079 articles so far
+    [434/731] days processed, 13272 articles so far
+    [441/731] days processed, 13496 articles so far
+    [448/731] days processed, 13721 articles so far
+    [455/731] days processed, 13968 articles so far
+    [462/731] days processed, 14191 articles so far
+    [469/731] days processed, 14424 articles so far
+    [476/731] days processed, 14616 articles so far
+    [483/731] days processed, 14844 articles so far
+    [490/731] days processed, 15174 articles so far
+    [497/731] days processed, 15429 articles so far
+    [504/731] days processed, 15660 articles so far
+    [511/731] days processed, 15878 articles so far
+    [518/731] days processed, 16080 articles so far
+    [525/731] days processed, 16349 articles so far
+    [532/731] days processed, 16559 articles so far
+    [539/731] days processed, 16793 articles so far
+    [546/731] days processed, 17037 articles so far
+    [553/731] days processed, 17322 articles so far
+    [560/731] days processed, 17641 articles so far
+    [567/731] days processed, 17851 articles so far
+    [574/731] days processed, 18079 articles so far
+    [581/731] days processed, 18387 articles so far
+    [588/731] days processed, 18593 articles so far
+    [595/731] days processed, 18803 articles so far
+    [602/731] days processed, 18994 articles so far
+    [609/731] days processed, 19177 articles so far
+    [616/731] days processed, 19429 articles so far
+    [623/731] days processed, 19630 articles so far
+    [630/731] days processed, 19841 articles so far
+    [637/731] days processed, 20108 articles so far
+    [644/731] days processed, 20369 articles so far
+    [651/731] days processed, 20598 articles so far
+    [658/731] days processed, 20777 articles so far
+    [665/731] days processed, 21005 articles so far
+    [672/731] days processed, 21335 articles so far
+    [679/731] days processed, 21578 articles so far
+    [686/731] days processed, 21997 articles so far
+    [693/731] days processed, 22459 articles so far
+    [700/731] days processed, 22908 articles so far
+    [707/731] days processed, 23366 articles so far
+    [714/731] days processed, 23850 articles so far
+    [721/731] days processed, 24300 articles so far
+    [728/731] days processed, 24727 articles so far
+  Done: 24898 total articles
+    ✓ Saved 24898 articles (732 days) to AMZN_news.json
+  ✓ AMZN completed (4/7)
+  [Stock Data] Downloading TSLA...
+    ✓ Saved 751 rows to TSLA-YFin-data-2023-01-01-2025-12-31.csv
+  [Indicators] Calculating for TSLA...
+    ✓ Saved 501 days of indicators to TSLA_indicators.json
+  [Fundamentals] Downloading for TSLA...
+    ✓ Saved 7 files for TSLA
+  [News] Downloading for TSLA...
+  Fetching 731 days of news...
+    [7/731] days processed, 24 articles so far
+    [14/731] days processed, 54 articles so far
+    [21/731] days processed, 80 articles so far
+    [28/731] days processed, 118 articles so far
+    [35/731] days processed, 150 articles so far
+    [42/731] days processed, 183 articles so far
+    [49/731] days processed, 204 articles so far
+    [56/731] days processed, 230 articles so far
+    [63/731] days processed, 257 articles so far
+    [70/731] days processed, 284 articles so far
+    [77/731] days processed, 318 articles so far
+    [84/731] days processed, 342 articles so far
+    [91/731] days processed, 370 articles so far
+    [98/731] days processed, 412 articles so far
+    [105/731] days processed, 444 articles so far
+    [112/731] days processed, 481 articles so far
+    [119/731] days processed, 522 articles so far
+    [126/731] days processed, 556 articles so far
+    [133/731] days processed, 584 articles so far
+    [140/731] days processed, 616 articles so far
+    [147/731] days processed, 643 articles so far
+    [154/731] days processed, 666 articles so far
+    [161/731] days processed, 695 articles so far
+    [168/731] days processed, 728 articles so far
+    [175/731] days processed, 748 articles so far
+    [182/731] days processed, 779 articles so far
+                                                                        TSLA [4/4] news:  68%|██████▊   | 19/28 [7:38:02<3:42:35, 1483.99s/task]TSLA [4/4] news:  71%|███████▏  | 20/28 [7:38:02<4:59:10, 2243.75s/task]                                                                        TSLA [4/4] news:  71%|███████▏  | 20/28 [7:38:02<4:59:10, 2243.75s/task]GOOGL [1/4] stock_data:  71%|███████▏  | 20/28 [7:38:02<4:59:10, 2243.75s/task]                                                                               GOOGL [1/4] stock_data:  71%|███████▏  | 20/28 [7:38:02<4:59:10, 2243.75s/task]                                                                               GOOGL [1/4] stock_data:  71%|███████▏  | 20/28 [7:38:02<4:59:10, 2243.75s/task]GOOGL [1/4] stock_data:  75%|███████▌  | 21/28 [7:38:02<3:17:22, 1691.82s/task]GOOGL [2/4] indicators:  75%|███████▌  | 21/28 [7:38:02<3:17:22, 1691.82s/task]                                                                               GOOGL [2/4] indicators:  75%|███████▌  | 21/28 [7:38:02<3:17:22, 1691.82s/task]                                                                               GOOGL [2/4] indicators:  75%|███████▌  | 21/28 [7:38:02<3:17:22, 1691.82s/task]GOOGL [3/4] fundamentals:  79%|███████▊  | 22/28 [7:38:02<2:49:10, 1691.82s/task]                                                                                 GOOGL [3/4] fundamentals:  79%|███████▊  | 22/28 [7:38:02<2:49:10, 1691.82s/task]                                                                                 GOOGL [3/4] fundamentals:  79%|███████▊  | 22/28 [7:38:04<2:49:10, 1691.82s/task]GOOGL [3/4] fundamentals:  82%|████████▏ | 23/28 [7:38:04<1:22:49, 993.89s/task] GOOGL [4/4] news:  82%|████████▏ | 23/28 [7:38:04<1:22:49, 993.89s/task]                                                                                GOOGL [4/4] news:  82%|████████▏ | 23/28 [7:38:04<1:22:49, 993.89s/task]/home/iislab/workspace/nacw/multi_agents/attack_trading_agents/.venv/lib/python3.10/site-packages/gnews/gnews.py:130: UserWarning: The start and end dates should be at least 1 day apart, or GNews will return no results
+  warnings.warn("The start and end dates should be at least 1 day apart, or GNews will return no results")
+    [189/731] days processed, 817 articles so far
+    [196/731] days processed, 853 articles so far
+    [203/731] days processed, 880 articles so far
+    [210/731] days processed, 908 articles so far
+    [217/731] days processed, 940 articles so far
+    [224/731] days processed, 960 articles so far
+    [231/731] days processed, 984 articles so far
+    [238/731] days processed, 1010 articles so far
+    [245/731] days processed, 1032 articles so far
+    [252/731] days processed, 1062 articles so far
+    [259/731] days processed, 1082 articles so far
+    [266/731] days processed, 1110 articles so far
+    [273/731] days processed, 1132 articles so far
+    [280/731] days processed, 1169 articles so far
+    [287/731] days processed, 1211 articles so far
+    [294/731] days processed, 1246 articles so far
+    [301/731] days processed, 1292 articles so far
+    [308/731] days processed, 1326 articles so far
+    [315/731] days processed, 1368 articles so far
+    [322/731] days processed, 1405 articles so far
+    [329/731] days processed, 1436 articles so far
+    [336/731] days processed, 1473 articles so far
+    [343/731] days processed, 1514 articles so far
+    [350/731] days processed, 1558 articles so far
+    [357/731] days processed, 1598 articles so far
+    [364/731] days processed, 1640 articles so far
+    [371/731] days processed, 1686 articles so far
+    [378/731] days processed, 1728 articles so far
+    [385/731] days processed, 1767 articles so far
+    [392/731] days processed, 1807 articles so far
+    [399/731] days processed, 1881 articles so far
+    [406/731] days processed, 1919 articles so far
+    [413/731] days processed, 1960 articles so far
+    [420/731] days processed, 2005 articles so far
+    [427/731] days processed, 2058 articles so far
+    [434/731] days processed, 2118 articles so far
+    [441/731] days processed, 2197 articles so far
+    [448/731] days processed, 2279 articles so far
+    [455/731] days processed, 2345 articles so far
+    [462/731] days processed, 2428 articles so far
+    [469/731] days processed, 2495 articles so far
+    [476/731] days processed, 2567 articles so far
+    [483/731] days processed, 2677 articles so far
+    [490/731] days processed, 2735 articles so far
+    [497/731] days processed, 2794 articles so far
+    [504/731] days processed, 2870 articles so far
+    [511/731] days processed, 2927 articles so far
+    [518/731] days processed, 3003 articles so far
+    [525/731] days processed, 3076 articles so far
+    [532/731] days processed, 3133 articles so far
+    [539/731] days processed, 3202 articles so far
+    [546/731] days processed, 3281 articles so far
+    [553/731] days processed, 3364 articles so far
+    [560/731] days processed, 3434 articles so far
+    [567/731] days processed, 3524 articles so far
+    [574/731] days processed, 3720 articles so far
+    [581/731] days processed, 3808 articles so far
+    [588/731] days processed, 3908 articles so far
+    [595/731] days processed, 3983 articles so far
+    [602/731] days processed, 4084 articles so far
+    [609/731] days processed, 4169 articles so far
+    [616/731] days processed, 4295 articles so far
+    [623/731] days processed, 4448 articles so far
+    [630/731] days processed, 4595 articles so far
+    [637/731] days processed, 4729 articles so far
+    [644/731] days processed, 4891 articles so far
+    [651/731] days processed, 5036 articles so far
+    [658/731] days processed, 5174 articles so far
+    [665/731] days processed, 5391 articles so far
+    [672/731] days processed, 5500 articles so far
+    [679/731] days processed, 5658 articles so far
+    [686/731] days processed, 5805 articles so far
+    [693/731] days processed, 5934 articles so far
+    [700/731] days processed, 6051 articles so far
+    [707/731] days processed, 6201 articles so far
+    [714/731] days processed, 6424 articles so far
+    [721/731] days processed, 6687 articles so far
+    [728/731] days processed, 6874 articles so far
+  Done: 6976 total articles
+    ✓ Saved 6976 articles (717 days) to TSLA_news.json
+  ✓ TSLA completed (5/7)
+  [Stock Data] Downloading GOOGL...
+    ✓ Saved 751 rows to GOOGL-YFin-data-2023-01-01-2025-12-31.csv
+  [Indicators] Calculating for GOOGL...
+    ✓ Saved 501 days of indicators to GOOGL_indicators.json
+  [Fundamentals] Downloading for GOOGL...
+    ✓ Saved 7 files for GOOGL
+  [News] Downloading for GOOGL...
+  Fetching 731 days of news...
+    [7/731] days processed, 18 articles so far
+    [14/731] days processed, 30 articles so far
+    [21/731] days processed, 47 articles so far
+    [28/731] days processed, 63 articles so far
+    [35/731] days processed, 95 articles so far
+    [42/731] days processed, 117 articles so far
+    [49/731] days processed, 140 articles so far
+    [56/731] days processed, 173 articles so far
+    [63/731] days processed, 202 articles so far
+    [70/731] days processed, 233 articles so far
+    [77/731] days processed, 258 articles so far
+    [84/731] days processed, 279 articles so far
+    [91/731] days processed, 294 articles so far
+    [98/731] days processed, 321 articles so far
+    [105/731] days processed, 342 articles so far
+    [112/731] days processed, 366 articles so far
+    [119/731] days processed, 413 articles so far
+    [126/731] days processed, 438 articles so far
+    [133/731] days processed, 459 articles so far
+    [140/731] days processed, 476 articles so far
+    [147/731] days processed, 495 articles so far
+    [154/731] days processed, 511 articles so far
+    [161/731] days processed, 532 articles so far
+    [168/731] days processed, 554 articles so far
+    [175/731] days processed, 578 articles so far
+    [182/731] days processed, 620 articles so far
+    [189/731] days processed, 638 articles so far
+    [196/731] days processed, 668 articles so far
+    [203/731] days processed, 705 articles so far
+    [210/731] days processed, 734 articles so far
+    [217/731] days processed, 765 articles so far
+    [224/731] days processed, 788 articles so far
+    [231/731] days processed, 819 articles so far
+    [238/731] days processed, 840 articles so far
+    [245/731] days processed, 866 articles so far
+    [252/731] days processed, 889 articles so far
+    [259/731] days processed, 918 articles so far
+    [266/731] days processed, 945 articles so far
+    [273/731] days processed, 969 articles so far
+    [280/731] days processed, 989 articles so far
+    [287/731] days processed, 1012 articles so far
+    [294/731] days processed, 1047 articles so far
+    [301/731] days processed, 1078 articles so far
+    [308/731] days processed, 1115 articles so far
+    [315/731] days processed, 1138 articles so far
+    [322/731] days processed, 1168 articles so far
+    [329/731] days processed, 1203 articles so far
+    [336/731] days processed, 1229 articles so far
+    [343/731] days processed, 1259 articles so far
+    [350/731] days processed, 1311 articles so far
+    [357/731] days processed, 1344 articles so far
+    [364/731] days processed, 1380 articles so far
+    [371/731] days processed, 1418 articles so far
+    [378/731] days processed, 1463 articles so far
+    [385/731] days processed, 1506 articles so far
+    [392/731] days processed, 1543 articles so far
+    [399/731] days processed, 1581 articles so far
+    [406/731] days processed, 1631 articles so far
+    [413/731] days processed, 1666 articles so far
+    [420/731] days processed, 1701 articles so far
+    [427/731] days processed, 1734 articles so far
+    [434/731] days processed, 1773 articles so far
+    [441/731] days processed, 1811 articles so far
+    [448/731] days processed, 1850 articles so far
+    [455/731] days processed, 1889 articles so far
+    [462/731] days processed, 1929 articles so far
+    [469/731] days processed, 1966 articles so far
+    [476/731] days processed, 2003 articles so far
+    [483/731] days processed, 2069 articles so far
+    [490/731] days processed, 2115 articles so far
+    [497/731] days processed, 2164 articles so far
+    [504/731] days processed, 2203 articles so far
+    [511/731] days processed, 2243 articles so far
+    [518/731] days processed, 2290 articles so far
+    [525/731] days processed, 2328 articles so far                                                                        GOOGL [4/4] news:  82%|████████▏ | 23/28 [8:40:50<1:22:49, 993.89s/task]GOOGL [4/4] news:  86%|████████▌ | 24/28 [8:40:50<1:48:20, 1625.04s/task]                                                                         GOOGL [4/4] news:  86%|████████▌ | 24/28 [8:40:50<1:48:20, 1625.04s/task]META [1/4] stock_data:  86%|████████▌ | 24/28 [8:40:50<1:48:20, 1625.04s/task]                                                                              META [1/4] stock_data:  86%|████████▌ | 24/28 [8:40:50<1:48:20, 1625.04s/task]                                                                              META [1/4] stock_data:  86%|████████▌ | 24/28 [8:40:51<1:48:20, 1625.04s/task]META [1/4] stock_data:  89%|████████▉ | 25/28 [8:40:51<1:01:18, 1226.32s/task]META [2/4] indicators:  89%|████████▉ | 25/28 [8:40:51<1:01:18, 1226.32s/task]                                                                              META [2/4] indicators:  89%|████████▉ | 25/28 [8:40:51<1:01:18, 1226.32s/task]                                                                              META [2/4] indicators:  89%|████████▉ | 25/28 [8:40:51<1:01:18, 1226.32s/task]META [3/4] fundamentals:  93%|█████████▎| 26/28 [8:40:51<40:52, 1226.32s/task]                                                                              META [3/4] fundamentals:  93%|█████████▎| 26/28 [8:40:51<40:52, 1226.32s/task]                                                                              META [3/4] fundamentals:  93%|█████████▎| 26/28 [8:40:53<40:52, 1226.32s/task]META [3/4] fundamentals:  96%|█████████▋| 27/28 [8:40:53<12:01, 721.27s/task] META [4/4] news:  96%|█████████▋| 27/28 [8:40:53<12:01, 721.27s/task]                                                                             META [4/4] news:  96%|█████████▋| 27/28 [8:40:53<12:01, 721.27s/task]/home/iislab/workspace/nacw/multi_agents/attack_trading_agents/.venv/lib/python3.10/site-packages/gnews/gnews.py:130: UserWarning: The start and end dates should be at least 1 day apart, or GNews will return no results
+  warnings.warn("The start and end dates should be at least 1 day apart, or GNews will return no results")
+                                                                     META [4/4] news:  96%|█████████▋| 27/28 [12:05:03<12:01, 721.27s/task]META [4/4] news: 100%|██████████| 28/28 [12:05:03<00:00, 3343.69s/task]                                                                       META [4/4] news: 100%|██████████| 28/28 [12:05:03<00:00, 3343.69s/task]META [4/4] news: 100%|██████████| 28/28 [12:05:03<00:00, 1553.70s/task]
+
+    [532/731] days processed, 2368 articles so far
+    [539/731] days processed, 2409 articles so far
+    [546/731] days processed, 2451 articles so far
+    [553/731] days processed, 2490 articles so far
+    [560/731] days processed, 2533 articles so far
+    [567/731] days processed, 2580 articles so far
+    [574/731] days processed, 2700 articles so far
+    [581/731] days processed, 2747 articles so far
+    [588/731] days processed, 2791 articles so far
+    [595/731] days processed, 2833 articles so far
+    [602/731] days processed, 2879 articles so far
+    [609/731] days processed, 2930 articles so far
+    [616/731] days processed, 3022 articles so far
+    [623/731] days processed, 3083 articles so far
+    [630/731] days processed, 3151 articles so far
+    [637/731] days processed, 3200 articles so far
+    [644/731] days processed, 3246 articles so far
+    [651/731] days processed, 3287 articles so far
+    [658/731] days processed, 3331 articles so far
+    [665/731] days processed, 3404 articles so far
+    [672/731] days processed, 3510 articles so far
+    [679/731] days processed, 3578 articles so far
+    [686/731] days processed, 3718 articles so far
+    [693/731] days processed, 3865 articles so far
+    [700/731] days processed, 4018 articles so far
+    [707/731] days processed, 4157 articles so far
+    [714/731] days processed, 4291 articles so far
+    [721/731] days processed, 4438 articles so far
+    [728/731] days processed, 4595 articles so far
+  Done: 4683 total articles
+    ✓ Saved 4683 articles (690 days) to GOOGL_news.json
+  ✓ GOOGL completed (6/7)
+  [Stock Data] Downloading META...
+    ✓ Saved 751 rows to META-YFin-data-2023-01-01-2025-12-31.csv
+  [Indicators] Calculating for META...
+    ✓ Saved 501 days of indicators to META_indicators.json
+  [Fundamentals] Downloading for META...
+    ✓ Saved 7 files for META
+  [News] Downloading for META...
+  Fetching 731 days of news...
+    [7/731] days processed, 178 articles so far
+    [14/731] days processed, 383 articles so far
+    [21/731] days processed, 628 articles so far
+    [28/731] days processed, 847 articles so far
+    [35/731] days processed, 1158 articles so far
+    [42/731] days processed, 1363 articles so far
+    [49/731] days processed, 1539 articles so far
+    [56/731] days processed, 1681 articles so far
+    [63/731] days processed, 1867 articles so far
+    [70/731] days processed, 2094 articles so far
+    [77/731] days processed, 2282 articles so far
+    [84/731] days processed, 2453 articles so far
+    [91/731] days processed, 2603 articles so far
+    [98/731] days processed, 2781 articles so far
+    [105/731] days processed, 3006 articles so far
+    [112/731] days processed, 3353 articles so far
+    [119/731] days processed, 3630 articles so far
+    [126/731] days processed, 3815 articles so far
+    [133/731] days processed, 3980 articles so far
+    [140/731] days processed, 4148 articles so far
+    [147/731] days processed, 4328 articles so far
+    [154/731] days processed, 4493 articles so far
+    [161/731] days processed, 4699 articles so far
+    [168/731] days processed, 4847 articles so far
+    [175/731] days processed, 5066 articles so far
+    [182/731] days processed, 5304 articles so far
+    [189/731] days processed, 5523 articles so far
+    [196/731] days processed, 5679 articles so far
+    [203/731] days processed, 5857 articles so far
+    [210/731] days processed, 6104 articles so far
+    [217/731] days processed, 6394 articles so far
+    [224/731] days processed, 6567 articles so far
+    [231/731] days processed, 6732 articles so far
+    [238/731] days processed, 6884 articles so far
+    [245/731] days processed, 7039 articles so far
+    [252/731] days processed, 7149 articles so far
+    [259/731] days processed, 7270 articles so far
+    [266/731] days processed, 7452 articles so far
+    [273/731] days processed, 7763 articles so far
+    [280/731] days processed, 8025 articles so far
+    [287/731] days processed, 8228 articles so far
+    [294/731] days processed, 8462 articles so far
+    [301/731] days processed, 8667 articles so far
+    [308/731] days processed, 8924 articles so far
+    [315/731] days processed, 9064 articles so far
+    [322/731] days processed, 9279 articles so far
+    [329/731] days processed, 9469 articles so far
+    [336/731] days processed, 9651 articles so far
+    [343/731] days processed, 9896 articles so far
+    [350/731] days processed, 10153 articles so far
+    [357/731] days processed, 10371 articles so far
+    [364/731] days processed, 10435 articles so far
+    [371/731] days processed, 10572 articles so far
+    [378/731] days processed, 10915 articles so far
+    [385/731] days processed, 11117 articles so far
+    [392/731] days processed, 11339 articles so far
+    [399/731] days processed, 11594 articles so far
+    [406/731] days processed, 11798 articles so far
+    [413/731] days processed, 12046 articles so far
+    [420/731] days processed, 12267 articles so far
+    [427/731] days processed, 12470 articles so far
+    [434/731] days processed, 12630 articles so far
+    [441/731] days processed, 12849 articles so far
+    [448/731] days processed, 12999 articles so far
+    [455/731] days processed, 13126 articles so far
+    [462/731] days processed, 13337 articles so far
+    [469/731] days processed, 13602 articles so far
+    [476/731] days processed, 13828 articles so far
+    [483/731] days processed, 14079 articles so far
+    [490/731] days processed, 14392 articles so far
+    [497/731] days processed, 14609 articles so far
+    [504/731] days processed, 14780 articles so far
+    [511/731] days processed, 14932 articles so far
+    [518/731] days processed, 15146 articles so far
+    [525/731] days processed, 15426 articles so far
+    [532/731] days processed, 15725 articles so far
+    [539/731] days processed, 15985 articles so far
+    [546/731] days processed, 16252 articles so far
+    [553/731] days processed, 16434 articles so far
+    [560/731] days processed, 16671 articles so far
+    [567/731] days processed, 16885 articles so far
+    [574/731] days processed, 17058 articles so far
+    [581/731] days processed, 17322 articles so far
+    [588/731] days processed, 17518 articles so far
+    [595/731] days processed, 17717 articles so far
+    [602/731] days processed, 17981 articles so far
+    [609/731] days processed, 18162 articles so far
+    [616/731] days processed, 18293 articles so far
+    [623/731] days processed, 18459 articles so far
+    [630/731] days processed, 18768 articles so far
+    [637/731] days processed, 18991 articles so far
+    [644/731] days processed, 19256 articles so far
+    [651/731] days processed, 19399 articles so far
+    [658/731] days processed, 19594 articles so far
+    [665/731] days processed, 19820 articles so far
+    [672/731] days processed, 20073 articles so far
+    [679/731] days processed, 20293 articles so far
+    [686/731] days processed, 20702 articles so far
+    [693/731] days processed, 21176 articles so far
+    [700/731] days processed, 21617 articles so far
+    [707/731] days processed, 22092 articles so far
+    [714/731] days processed, 22519 articles so far
+    [721/731] days processed, 22959 articles so far
+    [728/731] days processed, 23377 articles so far
+  Done: 23578 total articles
+    ✓ Saved 23578 articles (731 days) to META_news.json
+  ✓ META completed (7/7)
+
+============================================================
+SUMMARY
+============================================================
+  ✓ stock_data: 7/7 successful
+  ✓ indicators: 7/7 successful
+  ✓ fundamentals: 7/7 successful
+  ✓ news: 7/7 successful
+
+Data saved to: /home/iislab/workspace/nacw/multi_agents/attack_trading_agents/tradingagents/dataflows/local_data/
+Directory structure:
+  local_data/
+    ├── market_data/price_data/    # Stock OHLCV data
+    ├── indicators/                 # Technical indicators
+    ├── fundamental_data/{ticker}/  # Financial statements
+    └── news_data/                  # News articles
+
+Done!

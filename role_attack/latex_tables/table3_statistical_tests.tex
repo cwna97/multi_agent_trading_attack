@@ -1,0 +1,21 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Statistical Significance: Normal vs Attack Performance (n=7 tickers)}
+\label{tab:statistical_tests}
+\begin{tabular}{l|cc|cc|ccc}
+\toprule
+\multirow{2}{*}{\textbf{Attack Type}} & \multicolumn{2}{c|}{\textbf{CR (\%)}} & \multicolumn{2}{c|}{\textbf{MDD (\%)}} & \multicolumn{3}{c}{\textbf{Attack Metrics (\%)}} \\
+ & \textbf{$\Delta$Mean} & \textbf{p-value} & \textbf{$\Delta$Mean} & \textbf{p-value} & \textbf{ASR} & \textbf{DCR} & \textbf{p-value} \\
+\midrule
+Data Poisoning & +10.65 & 0.047* & +16.30 & 0.016* & 27.6 & 57.1 & 0.016* \\
+Indirect Injection & +6.41 & 0.062 & +10.55 & 0.031* & 31.4 & 56.9 & 0.016* \\
+Persuasive Adversary & +8.41 & 0.094 & +13.31 & 0.031* & 21.9 & 55.5 & 0.016* \\
+Objective Hijacking & +11.00 & 0.031* & +14.79 & 0.016* & 40.0 & 58.6 & 0.016* \\
+Jailbreaking (Authority) & +14.84 & 0.016* & +23.81 & 0.016* & 77.4 & 77.4 & 1.000 \\
+Jailbreaking (Hypothetical) & +14.50 & 0.016* & +23.77 & 0.016* & 69.8 & 70.0 & 1.000 \\
+\bottomrule
+\multicolumn{8}{l}{\footnotesize Note: $\Delta$Mean = Normal - Attack. CR/MDD p-value: Wilcoxon test (Normal vs Attack).} \\
+\multicolumn{8}{l}{\footnotesize ASR/DCR p-value: Wilcoxon test (ASR vs DCR). Significance: * p<0.05, ** p<0.01, *** p<0.001} \\
+\end{tabular}
+\end{table}

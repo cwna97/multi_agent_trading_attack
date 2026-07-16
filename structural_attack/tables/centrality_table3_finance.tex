@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Finance-aware vulnerability metrics averaged across D1, D2, A1, A2 BUY-targeted attacks. FWVS $= \overline{\mathbf{1}[a_{clean} \neq a_{atk}] \cdot |r_{t+1}| \cdot d_{action}}$ where $d_{action}=2$ (BUY$\leftrightarrow$SELL), $1$ otherwise. $\Delta$CR, $\Delta$Sharpe, $\Delta$MDD are relative to the clean baseline.}
+\label{tab:finance}
+\begin{tabular}{lrrrrr}
+\toprule
+Architecture (ACS ↑) & ACS & FWVS (×10²) & ΔCR (%) & ΔSharpe & ΔMDD (%) \\
+\midrule
+Decentralized & 0.167000 & 1.507800 & -13.660000 & -1.265000 & -13.800000 \\
+Hybrid & 0.222000 & 1.818700 & -2.780000 & 0.903000 & -3.820000 \\
+Centralized & 0.333000 & 2.075400 & -2.880000 & 0.626000 & -4.140000 \\
+Linear & 0.600000 & 1.818100 & -5.980000 & 0.646000 & -6.640000 \\
+\bottomrule
+\end{tabular}
+\end{table}

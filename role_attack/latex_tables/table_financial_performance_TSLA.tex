@@ -1,0 +1,35 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Financial Performance for TSLA: Normal vs Under Attack}
+\label{tab:financial_performance_tsla}
+\begin{tabular}{l|rrrr}
+\toprule
+\textbf{Condition} & \textbf{CR (\%)} & \textbf{AR (\%)} & \textbf{SR} & \textbf{MDD (\%)} \\
+\midrule
+\multicolumn{5}{l}{\textit{Normal Environment}} \\
+\midrule
+B\&H & -30.51 & -78.88 & -1.856 & -48.12 \\
+MACD & 7.94 & 38.58 & 0.982 & -8.53 \\
+\textbf{Ours} & \textbf{0.00} & \textbf{0.00} & 0.000 & \textbf{0.00} \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Single Attack}} \\
+\midrule
+Data Poisoning & -0.15 & -0.63 & -2.088 & -0.15 \\
+Indirect Injection & 0.00 & 0.00 & 0.000 & 0.00 \\
+Persuasive Adversary & 0.00 & 0.00 & 0.000 & 0.00 \\
+Objective Hijacking & -6.41 & -24.28 & -2.241 & -7.13 \\
+Jailbreaking (Authority) & -31.77 & -79.93 & -1.911 & -48.12 \\
+Jailbreaking (Hypothetical) & -31.77 & -79.93 & -1.911 & -48.12 \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Combined Attack}} \\
+\midrule
+C1: Insider Collusion & -31.65 & -79.77 & -1.900 & -48.03 \\
+C2: News Risk Bypass & -28.14 & -75.04 & -1.625 & -48.12 \\
+C3: Data Bias & 0.00 & 0.00 & 0.000 & 0.00 \\
+C4: Bias Risk Ignore & -31.77 & -79.93 & -1.911 & -48.12 \\
+C5: Full Chain & -31.77 & -79.93 & -1.911 & -48.12 \\
+C6: Analysis Trade & 3.46 & 15.35 & 1.025 & -3.98 \\
+\bottomrule
+\end{tabular}
+\end{table}

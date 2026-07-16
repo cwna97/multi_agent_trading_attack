@@ -1,0 +1,35 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Financial Performance for AAPL: Normal vs Under Attack}
+\label{tab:financial_performance_aapl}
+\begin{tabular}{l|rrrr}
+\toprule
+\textbf{Condition} & \textbf{CR (\%)} & \textbf{AR (\%)} & \textbf{SR} & \textbf{MDD (\%)} \\
+\midrule
+\multicolumn{5}{l}{\textit{Normal Environment}} \\
+\midrule
+B\&H & -10.54 & -37.87 & -1.618 & -15.14 \\
+MACD & -4.15 & -16.57 & -1.152 & -6.19 \\
+\textbf{Ours} & \textbf{-0.73} & \textbf{-3.08} & -3.171 & \textbf{-0.93} \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Single Attack}} \\
+\midrule
+Data Poisoning & -18.03 & -56.61 & -3.366 & -22.87 \\
+Indirect Injection & -3.55 & -14.10 & -1.663 & -5.70 \\
+Persuasive Adversary & -9.41 & -33.97 & -2.538 & -10.29 \\
+Objective Hijacking & -9.59 & -34.52 & -3.095 & -9.78 \\
+Jailbreaking (Authority) & -8.94 & -32.53 & -1.228 & -15.14 \\
+Jailbreaking (Hypothetical) & -8.94 & -32.53 & -1.228 & -15.14 \\
+\midrule
+\multicolumn{5}{l}{\textit{Under Combined Attack}} \\
+\midrule
+C1: Insider Collusion & -9.60 & -34.55 & -1.333 & -15.33 \\
+C2: News Risk Bypass & -8.94 & -32.53 & -1.228 & -15.14 \\
+C3: Data Bias & 9.05 & 43.87 & 4.012 & -1.74 \\
+C4: Bias Risk Ignore & -10.64 & -37.65 & -1.521 & -16.72 \\
+C5: Full Chain & -8.94 & -32.53 & -1.228 & -15.14 \\
+C6: Analysis Trade & -1.44 & -5.92 & -0.281 & -9.61 \\
+\bottomrule
+\end{tabular}
+\end{table}

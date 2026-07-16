@@ -1,0 +1,61 @@
+% Required in preamble:
+% \usepackage{xcolor}
+% \usepackage{multirow}
+% \usepackage{booktabs}
+% \usepackage{colortbl}
+
+% Table 1: AAPL, NVDA, TSLA
+\begin{table*}[t]
+\centering
+\caption{Financial Performance Across Tickers: Normal vs Under Attack (AAPL, NVDA, TSLA)}
+\label{tab:financial_per_ticker_1}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|cc|cc|cc}
+\toprule
+& \multicolumn{2}{c|}{AAPL} & \multicolumn{2}{c|}{NVDA} & \multicolumn{2}{c}{TSLA} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+\multirow{-2}{*}{\textbf{Method}} & CR (\%) & MDD (\%) & CR (\%) & MDD (\%) & CR (\%) & MDD (\%) \\
+\midrule
+B\&H & -10.54 & -15.14 & -20.70 & -28.41 & -30.51 & -48.12 \\
+MACD & -4.15 & -6.19 & -37.48 & -39.56 & 7.94 & -8.53 \\
+Multi-Agent & -0.73 & -0.93 & -2.03 & -2.76 & 0.00 & 0.00 \\
+\midrule
+\multicolumn{7}{l}{\cellcolor{gray!20} \textit{Multi-Agent w/ Adversarial}} \\
+Data Poisoning & -18.03 {\scriptsize\textcolor{red}{$\downarrow$17.30}} & -22.87 {\scriptsize\textcolor{red}{$\downarrow$21.94}} & -26.27 {\scriptsize\textcolor{red}{$\downarrow$24.24}} & -32.58 {\scriptsize\textcolor{red}{$\downarrow$29.82}} & -0.15 {\scriptsize\textcolor{red}{$\downarrow$0.15}} & -0.15 {\scriptsize\textcolor{red}{$\downarrow$0.15}} \\
+Indirect Injection & -3.55 {\scriptsize\textcolor{red}{$\downarrow$2.82}} & -5.70 {\scriptsize\textcolor{red}{$\downarrow$4.77}} & -17.14 {\scriptsize\textcolor{red}{$\downarrow$15.11}} & -27.58 {\scriptsize\textcolor{red}{$\downarrow$24.82}} & 0.00 {\scriptsize\textcolor{gray}{-}} & 0.00 {\scriptsize\textcolor{gray}{-}} \\
+Persuasive Adversary & -9.41 {\scriptsize\textcolor{red}{$\downarrow$8.68}} & -10.29 {\scriptsize\textcolor{red}{$\downarrow$9.36}} & -21.28 {\scriptsize\textcolor{red}{$\downarrow$19.25}} & -32.36 {\scriptsize\textcolor{red}{$\downarrow$29.60}} & 0.00 {\scriptsize\textcolor{gray}{-}} & 0.00 {\scriptsize\textcolor{gray}{-}} \\
+Objective Hijacking & -9.59 {\scriptsize\textcolor{red}{$\downarrow$8.86}} & -9.78 {\scriptsize\textcolor{red}{$\downarrow$8.85}} & -42.80 {\scriptsize\textcolor{red}{$\downarrow$40.77}} & -44.61 {\scriptsize\textcolor{red}{$\downarrow$41.85}} & -6.41 {\scriptsize\textcolor{red}{$\downarrow$6.41}} & -7.13 {\scriptsize\textcolor{red}{$\downarrow$7.13}} \\
+Jailbreaking (Auth) & -8.94 {\scriptsize\textcolor{red}{$\downarrow$8.21}} & -15.14 {\scriptsize\textcolor{red}{$\downarrow$14.21}} & -21.75 {\scriptsize\textcolor{red}{$\downarrow$19.72}} & -28.41 {\scriptsize\textcolor{red}{$\downarrow$25.65}} & -31.77 {\scriptsize\textcolor{red}{$\downarrow$31.77}} & -48.12 {\scriptsize\textcolor{red}{$\downarrow$48.12}} \\
+Jailbreaking (Hypo) & -8.94 {\scriptsize\textcolor{red}{$\downarrow$8.21}} & -15.14 {\scriptsize\textcolor{red}{$\downarrow$14.21}} & -23.37 {\scriptsize\textcolor{red}{$\downarrow$21.34}} & -28.97 {\scriptsize\textcolor{red}{$\downarrow$26.21}} & -31.77 {\scriptsize\textcolor{red}{$\downarrow$31.77}} & -48.12 {\scriptsize\textcolor{red}{$\downarrow$48.12}} \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+% Table 2: AMZN, GOOGL, MSFT (META excluded)
+\begin{table*}[t]
+\centering
+\caption{Financial Performance Across Tickers: Normal vs Under Attack (AMZN, GOOGL, MSFT)}
+\label{tab:financial_per_ticker_2}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|cc|cc|cc}
+\toprule
+& \multicolumn{2}{c|}{AMZN} & \multicolumn{2}{c|}{GOOGL} & \multicolumn{2}{c}{MSFT} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+\multirow{-2}{*}{\textbf{Method}} & CR (\%) & MDD (\%) & CR (\%) & MDD (\%) & CR (\%) & MDD (\%) \\
+\midrule
+B\&H & -12.49 & -20.38 & -18.44 & -25.13 & -9.32 & -15.13 \\
+MACD & -2.93 & -7.02 & -10.65 & -12.95 & -5.25 & -8.34 \\
+Multi-Agent & -0.63 & -1.51 & -1.10 & -2.25 & -0.50 & -1.12 \\
+\midrule
+\multicolumn{7}{l}{\cellcolor{gray!20} \textit{Multi-Agent w/ Adversarial}} \\
+Data Poisoning & -16.92 {\scriptsize\textcolor{red}{$\downarrow$16.29}} & -21.54 {\scriptsize\textcolor{red}{$\downarrow$20.03}} & -15.62 {\scriptsize\textcolor{red}{$\downarrow$14.52}} & -22.48 {\scriptsize\textcolor{red}{$\downarrow$20.23}} & -8.82 {\scriptsize\textcolor{red}{$\downarrow$8.32}} & -12.21 {\scriptsize\textcolor{red}{$\downarrow$11.09}} \\
+Indirect Injection & -16.90 {\scriptsize\textcolor{red}{$\downarrow$16.27}} & -21.03 {\scriptsize\textcolor{red}{$\downarrow$19.52}} & -9.61 {\scriptsize\textcolor{red}{$\downarrow$8.51}} & -11.83 {\scriptsize\textcolor{red}{$\downarrow$9.58}} & -3.85 {\scriptsize\textcolor{red}{$\downarrow$3.35}} & -10.75 {\scriptsize\textcolor{red}{$\downarrow$9.63}} \\
+Persuasive Adversary & -3.09 {\scriptsize\textcolor{red}{$\downarrow$2.46}} & -12.38 {\scriptsize\textcolor{red}{$\downarrow$10.87}} & -26.46 {\scriptsize\textcolor{red}{$\downarrow$25.36}} & -28.62 {\scriptsize\textcolor{red}{$\downarrow$26.37}} & -7.43 {\scriptsize\textcolor{red}{$\downarrow$6.93}} & -12.59 {\scriptsize\textcolor{red}{$\downarrow$11.47}} \\
+Objective Hijacking & -3.90 {\scriptsize\textcolor{red}{$\downarrow$3.27}} & -8.12 {\scriptsize\textcolor{red}{$\downarrow$6.61}} & -17.85 {\scriptsize\textcolor{red}{$\downarrow$16.75}} & -21.23 {\scriptsize\textcolor{red}{$\downarrow$18.98}} & -4.30 {\scriptsize\textcolor{red}{$\downarrow$3.80}} & -11.72 {\scriptsize\textcolor{red}{$\downarrow$10.60}} \\
+Jailbreaking (Auth) & -13.73 {\scriptsize\textcolor{red}{$\downarrow$13.10}} & -21.40 {\scriptsize\textcolor{red}{$\downarrow$19.89}} & -18.39 {\scriptsize\textcolor{red}{$\downarrow$17.29}} & -25.13 {\scriptsize\textcolor{red}{$\downarrow$22.88}} & -10.27 {\scriptsize\textcolor{red}{$\downarrow$9.77}} & -15.89 {\scriptsize\textcolor{red}{$\downarrow$14.77}} \\
+Jailbreaking (Hypo) & -13.73 {\scriptsize\textcolor{red}{$\downarrow$13.10}} & -21.40 {\scriptsize\textcolor{red}{$\downarrow$19.89}} & -18.39 {\scriptsize\textcolor{red}{$\downarrow$17.29}} & -25.13 {\scriptsize\textcolor{red}{$\downarrow$22.88}} & -10.27 {\scriptsize\textcolor{red}{$\downarrow$9.77}} & -15.89 {\scriptsize\textcolor{red}{$\downarrow$14.77}} \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

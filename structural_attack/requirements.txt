@@ -1,0 +1,62 @@
+# TradingAgents Attack Framework - Requirements
+# Python 3.10+
+
+# ===== Core Dependencies =====
+python-dotenv
+pydantic
+typing-extensions
+
+# ===== LLM & LangChain =====
+openai
+langchain
+langchain-openai
+langchain-anthropic
+langchain-google-genai
+langchain-experimental
+langgraph
+
+# ===== Data & Finance =====
+pandas
+numpy
+yfinance
+pandas-market-calendars
+stockstats
+backtrader
+akshare
+tushare
+finnhub-python
+eodhd
+
+# ===== News & Web Scraping =====
+gnews
+newspaper3k
+beautifulsoup4
+requests
+selenium
+feedparser
+praw
+parsel
+
+# ===== Vector Database =====
+chromadb
+
+# ===== Visualization =====
+matplotlib
+seaborn
+
+# ===== CLI & Progress =====
+typer
+questionary
+rich
+tqdm
+chainlit
+
+# ===== Date/Time & Utils =====
+python-dateutil
+pytz
+
+# ===== Storage =====
+redis
+
+# ===== Development =====
+setuptools

@@ -1,0 +1,210 @@
+================================================================================
+ 실험 계획서 — 2026-01-01 ~ 2026-03-31
+ 작성일: 2026-04-18
+ 대상 티커: BTC-USD, MSFT, NVDA, TSLA, AAPL
+================================================================================
+
+※ 이 파일을 Claude에게 붙여넣으면 아래 작업들을 순서대로 진행합니다.
+※ 작업 디렉토리: /home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/
+※ Python venv: .venv/bin/python3
+
+--------------------------------------------------------------------------------
+[현재 데이터 상태 요약]
+--------------------------------------------------------------------------------
+
+  데이터 소스          AAPL      BTC-USD   MSFT      NVDA      TSLA
+  ─────────────────────────────────────────────────────────────────
+  Market (price)      ✅ 61일   ✅ 90일   ✅ 61일   ✅ 61일   ✅ 61일
+  Indicators          ✅ 61일   ✅ 90일   ✅ 61일   ✅ 61일   ✅ 61일
+  News                ❌ 없음   ⚠️ 5일    ❌ 없음   ❌ 없음   ❌ 없음
+  Social              ✅ 257p   ✅ 292p   ✅ 532p   ✅ 514p   ✅ 275p
+  Fundamentals        ✅(Q3'25) N/A       ✅(Q3'25) ✅(Q3'25) ✅(Q3'25)
+
+  → 뉴스 수집 후 모든 데이터 준비 완료
+
+--------------------------------------------------------------------------------
+TASK 1. 뉴스 데이터 수집
+--------------------------------------------------------------------------------
+
+조건:
+  - Alpha Vantage FREE 플랜: 25 req/day, UTC 00:00 (KST 09:00) 리셋
+  - 5개 티커 × 1 req = 5 calls → 1회 실행으로 충분
+  - fetch_2026_data.py의 TICKERS에 AAPL 추가 후 news만 실행
+
+할 일:
+  1) fetch_2026_data.py의 TICKERS 리스트에 "AAPL" 추가
+     현재: TICKERS = ["BTC-USD", "MSFT", "NVDA", "TSLA"]
+     변경: TICKERS = ["BTC-USD", "MSFT", "NVDA", "TSLA", "AAPL"]
+
+  2) news만 재수집하는 스크립트 작성 및 실행
+     - 각 티커마다 time_from=20260101T0000, time_to=20260331T2359
+     - limit=200 (하루 약 2건 수준, 과도한 토큰 소비 방지)
+     - 티커 간 13초 딜레이 (AV 5 req/min 제한 준수)
+     - 기존 news JSON에 merge (덮어쓰기 X)
+
+  3) 수집 후 날짜별 건수 검증
+     - 목표: 모든 티커 60일 이상 커버
+
+--------------------------------------------------------------------------------
+TASK 2. 실제 local_data에 Poison 코드 작성
+--------------------------------------------------------------------------------
+
+현재 문제:
+  - adversarial_attack.py의 AdversarialDataInjector는 구버전 경로 사용
+    (news/TICKER/DATE.json 구조)
+  - 실제 데이터는 news_data/alpha_vantage/TICKER_news.json 구조 (날짜가 key인 dict)
+  - social_data/TICKER_social.json도 동일하게 날짜 key dict 구조
+
+할 일: poison_local_data.py 신규 작성
+  - 클래스: LocalDataPoisoner
+  - 메서드:
+      poison_news(ticker, date_range, attack_goal, n_articles=3)
+        → news_data/alpha_vantage/{ticker}_news.json 에서
+          해당 날짜 범위 각 날짜에 악성 article n_articles개 prepend
+          백업: news_data/alpha_vantage/{ticker}_news.json.bak
+
+      poison_social(ticker, date_range, attack_goal, n_posts=3)
+        → social_data/{ticker}_social.json 에서
+          해당 날짜 범위 각 날짜에 악성 post n_posts개 prepend
+          백업: social_data/{ticker}_social.json.bak
+
+      restore(ticker)
+        → .bak 파일로 원본 복원
+
+  - attack_goal 별 페이로드:
+      force_buy  → 극도로 낙관적 기사/포스트 삽입
+      force_sell → 극도로 비관적 기사/포스트 삽입
+      force_hold → 불확실성 극대화 기사/포스트 삽입
+
+  - poisoned_news / poisoned_social config flag 활용 (기존 local.py 호환)
+  - news_data_poisoned/, social_data_poisoned/ 디렉토리에 저장
+    (원본은 건드리지 않음 — config["poisoned_news"]=True 시 별도 디렉토리 읽도록
+     local.py가 이미 구현되어 있음)
+
+--------------------------------------------------------------------------------
+TASK 3. debate 제외 구조 실험 스크립트 작성 (Spark 1 & Spark 2)
+--------------------------------------------------------------------------------
+
+대상 구조: linear, centralized, decentralized, moa  (debate 제외)
+대상 티커: BTC-USD, MSFT, NVDA, TSLA, AAPL
+기간:      2026-01-01 ~ 2026-03-31
+모델:      Spark1=qwen2.5:72b / Spark2=deepseek-r1:70b, llama3.3:70b
+Analysts:  market, social, news (BTC-USD는 fundamentals 제외)
+
+현재 run_experiments.py 구조:
+  - STRUCTURE_EXPERIMENTS: linear(Spark1), centralized(Spark1),
+                            decentralized(Spark2), moa(Spark2)
+  - 날짜/티커가 2025년으로 하드코딩됨
+
+할 일: run_structure_experiments_2026.py 신규 작성
+  변경사항:
+    START_DATE = "2026-01-01"
+    END_DATE   = "2026-03-31"
+    TICKERS    = ["BTC-USD", "MSFT", "NVDA", "TSLA", "AAPL"]
+    EXPERIMENTS = [
+      {linear,      qwen2.5:72b,      Spark1},
+      {centralized, qwen2.5:72b,      Spark1},
+      {decentralized, deepseek-r1:70b, Spark2},
+      {moa,         deepseek-r1:70b,  Spark2},
+    ]
+
+  Spark 배분 전략 (기존과 동일):
+    Spark1: linear, centralized → 병렬 실행 (qwen2.5:72b)
+    Spark2: decentralized → moa 순서대로 순차 실행
+
+  결과 저장: trading_results/2026-01-01_2026-03-31/{structure_name}/
+
+  실행 방법:
+    cd /home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty
+    .venv/bin/python3 run_structure_experiments_2026.py
+
+--------------------------------------------------------------------------------
+TASK 4. debate 제외 구조 × 적대적 시나리오 실험 코드 작성
+--------------------------------------------------------------------------------
+
+목적:
+  - TASK 2에서 만든 poison 데이터로
+  - TASK 3의 4가지 구조(linear/centralized/decentralized/moa) 각각에서
+  - 공격 성공률(ASR), 결정 변화율(DCR) 측정
+
+공격 시나리오 (기존 attack_results/2025 폴더와 동일):
+  attack_01: data_poisoning    (뉴스 직접 주입)
+  attack_02: indirect_injection (소셜 미디어 간접)
+  attack_03: persuasive_bullish (설득형 강세)
+  attack_04: objective_hijacking (목표 하이재킹)
+  attack_05: jailbreaking (역할 탈출)
+  combined_c1~c6: 복합 공격
+
+할 일: run_adversarial_2026.py 신규 작성
+  - 기반: 기존 run_adversarial_attack.py + run_experiments.py 구조 통합
+  - 핵심 로직:
+      for structure in [linear, centralized, decentralized, moa]:
+        for attack_type in ATTACK_SCENARIOS:
+          1) LocalDataPoisoner로 poison 데이터 생성 (TASK 2 코드 활용)
+          2) config["poisoned_news"] = True 설정
+          3) TradingAgentsGraph(graph_structure=structure).propagate() 실행
+          4) 원본 결정 vs 공격 후 결정 비교 → ASR/DCR 계산
+          5) 결과 저장: attack_results/2026-01-01_2026-03-31/{structure}/{attack_type}/
+
+  - Spark 배분:
+      linear, centralized     → Spark1 (localhost:11434)
+      decentralized, moa      → Spark2 (169.254.30.132:11434)
+
+  - 결과 집계 스크립트: analyze_adversarial_2026.py
+      → 구조별 × 공격유형별 ASR/DCR 테이블 출력
+      → 기존 analyze_attack_results.py 패턴 재활용
+
+  실행 방법:
+    # 전체 실행 (순차)
+    .venv/bin/python3 run_adversarial_2026.py
+
+    # 특정 구조만
+    .venv/bin/python3 run_adversarial_2026.py --structure linear
+
+    # 특정 공격만
+    .venv/bin/python3 run_adversarial_2026.py --attack attack_01
+
+    # 분석
+    .venv/bin/python3 analyze_adversarial_2026.py
+
+--------------------------------------------------------------------------------
+[실행 순서 요약]
+--------------------------------------------------------------------------------
+
+  Day 1 (오늘 이후):
+    [완료] AAPL market data, indicators, social data 수집
+
+  Day 2 (KST 09:00 이후 — API 리셋):
+    TASK 1 실행 → 뉴스 수집 (5 calls)
+    검증 실행   → 모든 데이터 커버리지 재확인
+
+  Day 2 (뉴스 수집 후):
+    TASK 2 실행 → poison_local_data.py 작성 및 테스트
+    TASK 3 실행 → run_structure_experiments_2026.py 작성 → Spark1/2 병렬 실행
+    TASK 4 실행 → run_adversarial_2026.py 작성 → 실험 실행
+
+--------------------------------------------------------------------------------
+[참고: 관련 파일 경로]
+--------------------------------------------------------------------------------
+
+  fetch_2026_data.py              ← TASK 1 수정 대상
+  adversarial_attack.py           ← TASK 2 참조 (AdversarialPromptGenerator)
+  run_adversarial_attack.py       ← TASK 4 참조 (AttackRunner 패턴)
+  run_experiments.py              ← TASK 3 참조 (Spark 배분 패턴)
+  tradingagents/dataflows/local.py ← poisoned_news/social config 처리 위치
+  tradingagents/dataflows/local_data/
+    news_data/alpha_vantage/{TICKER}_news.json   ← 뉴스 원본
+    news_data_poisoned/{TICKER}_news.json        ← 뉴스 poison 대상
+    social_data/{TICKER}_social.json             ← 소셜 원본
+    social_data_poisoned/{TICKER}_social.json    ← 소셜 poison 대상
+  attack_results/2025-01-01_2025-03-31/          ← 기존 공격 결과 (참조용)
+  trading_results/                               ← 구조 실험 결과 저장
+
+================================================================================
+
+
+# 단일 실험
+.venv/bin/python3 run_adversarial_experiments.py --attack D1 --signal SELL --structure linear
+
+# 전체 40개
+.venv/bin/python3 run_adversarial_experiments.py --all
