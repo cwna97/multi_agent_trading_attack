@@ -168,18 +168,6 @@ content is synthetically generated and confined to the experimental environment 
 backtests, no live capital or market interaction). Use it only to evaluate and harden
 systems you own or are authorized to test.
 
-## Citation
-
-If you use this work, please cite the paper:
-
-```bibtex
-@inproceedings{poisoning_agentic_alpha_2026,
-  title     = {Poisoning Agentic Alpha: Adversarial Vulnerabilities Across Roles and
-               Architectures in Multi-Agent Trading Systems},
-  booktitle = {Proceedings of the ACM International Conference on AI in Finance (ICAIF '26)},
-  year      = {2026}
-}
-```
 
 ## Acknowledgements
 
