@@ -1,0 +1,29 @@
+{
+  "attack_type": "data_poisoning",
+  "poisoning_method": "regime_content_poisoning",
+  "target_agent": "news_analyst",
+  "poison_ratio": 0.1,
+  "poison_seed": null,
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-03-31"
+  },
+  "tickers": [
+    "BTC-USD",
+    "MSFT",
+    "NVDA",
+    "TSLA",
+    "AAPL"
+  ],
+  "metrics": {
+    "total_experiments": 305,
+    "successful_runs": 305,
+    "failed_runs": 0,
+    "comparable": 305,
+    "decision_changes": 211,
+    "target_achieved": 92,
+    "decision_change_rate": 69.2,
+    "attack_success_rate": 30.2
+  },
+  "timestamp": "2026-07-28T12:38:51.203484"
+}

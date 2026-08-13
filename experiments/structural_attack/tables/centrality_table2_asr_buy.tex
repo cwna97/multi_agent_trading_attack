@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Attack Success Rate (ASR, \%) under BUY-targeted attacks. Architectures ordered left-to-right by ascending centrality score (ACS). A3 achieves 100\% across all structures (output-level hijacking; see Supplementary). Spearman $\rho$ computed between ACS and ASR across four architectures.}
+\label{tab:asr_buy}
+\begin{tabular}{lrrrrr}
+\toprule
+Attack & Decentralized & Hybrid & Centralized & Linear & Spearman ρ \\
+\midrule
+D1 (D1 (Data Poison)) & 7.800000 & 84.700000 & 90.400000 & 99.100000 & 1.000000 \\
+D2 (D2 (Indirect Inj.)) & 3.100000 & 78.400000 & 87.100000 & 98.100000 & 1.000000 \\
+A1 (A1 (1-Analyst)) & 9.500000 & 45.100000 & 61.400000 & 57.800000 & 0.800000 \\
+A2 (A2 (2-Analyst)) & 9.500000 & 97.400000 & 87.600000 & 65.400000 & 0.200000 \\
+A3 (A3 (Decision Hijack)) & 100.000000 & 100.000000 & 100.000000 & 100.000000 & NaN \\
+Average (D1–A2 excl. A3) & 7.500000 & 76.400000 & 81.600000 & 80.100000 & 0.800000 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,29 @@
+{
+  "attack_type": "jailbreaking",
+  "target_agent": "risk_manager",
+  "jailbreak_method": "authority_override",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-03-31"
+  },
+  "tickers": [
+    "BTC-USD",
+    "MSFT",
+    "NVDA",
+    "TSLA",
+    "AAPL"
+  ],
+  "metrics": {
+    "total_experiments": 305,
+    "successful_runs": 305,
+    "failed_runs": 0,
+    "comparable": 305,
+    "decision_changes": 211,
+    "risk_bypass_success": 211,
+    "hold_to_buy": 103,
+    "sell_to_buy": 108,
+    "decision_change_rate": 69.2,
+    "attack_success_rate": 69.2
+  },
+  "timestamp": "2026-07-23T03:38:44.491720"
+}

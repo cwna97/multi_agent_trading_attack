@@ -1,0 +1,23 @@
+ticker,date,error,traceback
+AAPL,2026-01-05,[Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/logs/cost_log.json',"Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/main_adversarial.py"", line 257, in process_ticker
+    over_budget = cost_tracker.record(cb, ticker=ticker, trade_date=date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/tradingagents/utils/cost_tracker.py"", line 132, in record
+    _save(self.log_path, data)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/tradingagents/utils/cost_tracker.py"", line 55, in _save
+    tmp.replace(path)   # atomic rename
+  File ""/home/iislab/.local/share/uv/python/cpython-3.10.19-linux-aarch64-gnu/lib/python3.10/pathlib.py"", line 1247, in replace
+    self._accessor.replace(self, target)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/logs/cost_log.json'
+"
+AAPL,2026-02-17,[Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/logs/cost_log.json',"Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/main_adversarial.py"", line 257, in process_ticker
+    over_budget = cost_tracker.record(cb, ticker=ticker, trade_date=date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/tradingagents/utils/cost_tracker.py"", line 132, in record
+    _save(self.log_path, data)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/tradingagents/utils/cost_tracker.py"", line 55, in _save
+    tmp.replace(path)   # atomic rename
+  File ""/home/iislab/.local/share/uv/python/cpython-3.10.19-linux-aarch64-gnu/lib/python3.10/pathlib.py"", line 1247, in replace
+    self._accessor.replace(self, target)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/logs/cost_log.json'
+"

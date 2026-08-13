@@ -1,0 +1,31 @@
+{
+  "attack_type": "indirect_injection",
+  "target_agent": "social_media_analyst",
+  "injection_method": "hidden_instruction",
+  "direction": "bearish",
+  "target_action": "SELL",
+  "poison_ratio": 0.1,
+  "poison_seed": null,
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-03-31"
+  },
+  "tickers": [
+    "BTC-USD",
+    "MSFT",
+    "NVDA",
+    "TSLA",
+    "AAPL"
+  ],
+  "metrics": {
+    "total_experiments": 305,
+    "successful_runs": 305,
+    "failed_runs": 0,
+    "comparable": 305,
+    "decision_changes": 199,
+    "target_achieved": 116,
+    "decision_change_rate": 65.2,
+    "attack_success_rate": 38.0
+  },
+  "timestamp": "2026-07-28T12:35:52.797273"
+}

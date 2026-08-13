@@ -1,0 +1,44 @@
+ticker,date,error,traceback
+BTC-USD,2026-01-07,"Error code: 500 - {'error': {'message': 'The server had an error while processing your request. Sorry about that!', 'type': 'server_error', 'param': None, 'code': None}}","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/main.py"", line 84, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/tradingagents/graph/trading_graph.py"", line 236, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2436, in stream
+    for _ in runner.tick(
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langgraph/pregel/runner.py"", line 161, in tick
+    run_with_retry(
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langgraph/pregel/retry.py"", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 623, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 377, in invoke
+    ret = self.func(*args, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/tradingagents/agents/analysts/social_media_analyst.py"", line 48, in social_media_analyst_node
+    result = chain.invoke(state[""messages""])
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langchain_core/runnables/base.py"", line 3047, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langchain_core/runnables/base.py"", line 5431, in invoke
+    return self.bound.invoke(
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 372, in invoke
+    self.generate_prompt(
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 957, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 776, in generate
+    self._generate_with_cache(
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 1022, in _generate_with_cache
+    result = self._generate(
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/langchain_openai/chat_models/base.py"", line 995, in _generate
+    response = self.client.create(**payload)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/openai/_utils/_utils.py"", line 287, in wrapper
+    return func(*args, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py"", line 925, in create
+    return self._post(
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/openai/_base_client.py"", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File ""/home/iislab/workspace/nacw/multi_agents/multi_agents_vulnerablilty/.venv/lib/python3.10/site-packages/openai/_base_client.py"", line 1037, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 500 - {'error': {'message': 'The server had an error while processing your request. Sorry about that!', 'type': 'server_error', 'param': None, 'code': None}}
+"

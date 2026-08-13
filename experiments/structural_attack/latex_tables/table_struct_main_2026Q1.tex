@@ -1,0 +1,45 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{l cccc @{\hskip 2em} cccc}
+\toprule
+& \multicolumn{4}{c}{\textbf{GPT-4.1}} & \multicolumn{4}{c}{\textbf{Qwen3-235B-A22B}} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Compromised analyst
+ & \makecell{Dec.\\.167} & \makecell{Hyb.\\.222} & \makecell{Cen.\\.333}
+ & \makecell{Lin.\\.600}
+ & \makecell{Dec.\\.167} & \makecell{Hyb.\\.222} & \makecell{Cen.\\.333}
+ & \makecell{Lin.\\.600} \\
+\midrule
+\multicolumn{9}{l}{\textit{SELL-targeted}} \\
+\quad News (data poisoning)       & 15.7 & 91.9 & \textbf{99.3} & \textbf{99.3} & 12.8 & \textbf{77.5} & 39.9 & 70.6 \\
+\quad Social (indirect injection) & 8.5 & 80.1 & \textbf{99.3} & \textbf{99.3} & 13.4 & \textbf{14.7} & 6.3 & 3.1 \\
+\quad Market (objective hijack.)  & 0.3 & 7.4 & \textbf{55.9} & 24.0 & 6.7 & 2.5 & \textbf{10.8} & 2.8 \\
+\quad\quad $N$ & 305 & 297 & 270 & 287 & 298 & 285 & 286 & 286 \\
+\addlinespace
+\multicolumn{9}{l}{\textit{BUY-targeted}} \\
+\quad News (data poisoning)       & 7.8 & 84.7 & 90.4 & \textbf{99.1} & 54.3 & 92.7 & 76.9 & \textbf{96.2} \\
+\quad Social (indirect injection) & 3.1 & 78.4 & 87.1 & \textbf{98.1} & 53.3 & 92.7 & 97.4 & \textbf{100.0} \\
+\quad Market (objective hijack.)  & 9.5 & 45.1 & \textbf{61.4} & 57.8 & 69.5 & 31.7 & \textbf{89.7} & 46.2 \\
+\quad\quad $N$ & 295 & 268 & 249 & 211 & 105 & 41 & 39 & 52 \\
+\bottomrule
+\end{tabular}
+\caption{Attack success rate (\%) by topology on 2026 Q1, pooled across five
+assets. Each attack compromises one analyst; the topology determines how its
+report reaches the decision. Columns are ordered by APS, the closed-form
+propagation score of Section~\ref{sec:aps}. $N$ is the ASR denominator:
+(asset, day) observations, out of $305$ ($5$ assets $\times$ $61$ days),
+whose \emph{clean} decision does not already equal the target - computed
+from the clean run alone, so $N$ is a single, shared value across D1/D2/A1
+within a backbone/topology/regime cell (it does not depend on which attack is
+being scored). A day on which the attacked run itself errored or is missing
+still counts toward $N$ but cannot count as a success - a crashed attack
+did not achieve its target either, so this is also the more conservative
+reading of "did the attack work." $N$ varies across topologies and backbones
+because the clean decision distribution itself varies (BTA); it does not
+vary across attacks. ASR here is directly comparable to the per-cell values
+used in the null-vs-structure, APS-vs-ASR, and majority-cliff figures (same
+source data and definitions). Most vulnerable value per row within each
+backbone in \textbf{bold} (ties both bolded).}
+\label{tab:struct_main}
+\end{table*}

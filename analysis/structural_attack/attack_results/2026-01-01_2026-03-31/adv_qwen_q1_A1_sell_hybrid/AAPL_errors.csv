@@ -1,0 +1,27 @@
+ticker,date,error,traceback
+AAPL,2026-01-20,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/main_adversarial.py"", line 244, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/tradingagents/graph/trading_graph.py"", line 266, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"
+AAPL,2026-01-26,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/main_adversarial.py"", line 244, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/tradingagents/graph/trading_graph.py"", line 266, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/experiments/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"

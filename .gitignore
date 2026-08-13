@@ -1,2 +1,23 @@
+# Logs
 *.log
 **/logs/
+
+# Environment / secrets (never commit real API keys)
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Python
+__pycache__/
+*.egg-info/
+.venv/
+env/
+
+# OS
+.DS_Store
+
+# Paper PDF (kept local, not published)
+ICAIF2026___Poisoning_Agentic_Alpha_final.pdf

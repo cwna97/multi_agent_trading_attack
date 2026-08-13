@@ -1,0 +1,45 @@
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{llcccc@{\hskip 1.5em}cccc}
+\toprule
+& & \multicolumn{4}{c}{SELL-targeted} & \multicolumn{4}{c}{BUY-targeted} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-10}
+Attack & Target role & ASR & $N$ & $\Delta$CR & $\Delta$MDD
+                     & ASR & $N$ & $\Delta$CR & $\Delta$MDD \\
+\midrule
+\multicolumn{2}{l}{\emph{Clean baseline}}
+  & --- & --- & \multicolumn{2}{c}{CR $=-8.06\%$, MDD $=-12.73\%$}
+  & --- & --- & \multicolumn{2}{c}{CR $=-8.06\%$, MDD $=-12.73\%$} \\
+\midrule
+\multicolumn{10}{l}{\textit{Data-level}} \\
+\quad Data poisoning     & Analyst (news)   & 21.8 & 225 & \textbf{-3.0} & \textbf{-2.9} & 19.1 & 183 & -2.4 & -2.5 \\
+\quad Indirect injection & Analyst (social) & \textbf{29.8} & 225 & +0.1 & +1.0 & 24.0 & 183 & +0.7 & +2.3 \\
+\addlinespace
+\multicolumn{10}{l}{\textit{Prompt-level}} \\
+\quad Persuasive adversary & Researcher   & --- & --- & --- & --- & 16.9 & 183 & -0.7 & -2.1 \\
+\quad Objective hijacking  & Trader       & 18.0 & 122 & --- & --- & 13.8 & 80 & --- & --- \\
+\quad Jailbreaking         & Risk Manager & --- & --- & --- & --- & \textbf{98.9} & 183 & \textbf{-7.1} & \textbf{-9.2} \\
+\bottomrule
+\end{tabular}
+\caption{Role-specific attack results on 2026 Q1 (5 assets, both target
+directions). Each cell averages over five assets; per-asset values appear in
+Figure~\ref{fig:asr_strip} and Appendix~\ref{app:per_asset}. $N$ is the ASR
+denominator: the number of (asset, day) observations, out of 305 (5 assets
+$\times$ 61 trading days), whose clean decision does not already equal the
+target action---i.e. $305$ minus the baseline target alignment (BTA) count.
+BTA is $26.2\%$ ($n=80$) under SELL-targeted and $40.0\%$ ($n=122$) under
+BUY-targeted attacks; because BTA is a property of the clean system alone,
+$N$ is identical (225 / 183) across attacks sharing a regime, except
+Objective hijacking, whose per-day adaptive target restricts $N$ to the
+subset of days where that direction was actually targeted. Persuasive
+adversary and Jailbreaking were run only as BUY-targeted campaigns in this
+release (no bearish/authority-block counterpart exists), so their
+SELL-targeted cells are left blank. Objective hijacking always targets the
+inverse of that day's clean decision, so ASR is split by the day-level
+target (SELL-targeted: clean decision $=$ BUY, $N=122$; BUY-targeted: clean
+decision $=$ SELL, $N=80$); its single continuous trading trajectory cannot
+be decomposed into a per-direction CR/MDD, so those cells are left blank.
+Best (most vulnerable) value per column in \textbf{bold}; $N$ is a sample
+size, not a vulnerability metric, and is left unbolded.}
+\end{table*}

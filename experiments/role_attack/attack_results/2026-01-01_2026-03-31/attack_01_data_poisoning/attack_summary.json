@@ -1,0 +1,35 @@
+{
+  "attack_name": "attack_01_data_poisoning",
+  "attack_config": {
+    "attack_type": "data_poisoning",
+    "target_action": "SELL",
+    "poison_strength": 0.8,
+    "noise_std": 0.1,
+    "preserve_consistency": true,
+    "enabled": true,
+    "attack_name": "attack_01_data_poisoning",
+    "description": "Replaces news headline/content with fabricated text matching target_action (sentiment score/label left untouched)"
+  },
+  "date_range": {
+    "start": "2026-01-01",
+    "end": "2026-03-31"
+  },
+  "tickers": [
+    "BTC-USD",
+    "MSFT",
+    "NVDA",
+    "TSLA",
+    "AAPL"
+  ],
+  "metrics": {
+    "total_experiments": 305,
+    "successful_runs": 305,
+    "failed_runs": 0,
+    "comparable": 305,
+    "decision_changes": 283,
+    "target_action_achieved": 197,
+    "decision_change_rate": 92.78688524590164,
+    "attack_success_rate": 64.59016393442623
+  },
+  "timestamp": "2026-07-24T16:38:22.548792"
+}

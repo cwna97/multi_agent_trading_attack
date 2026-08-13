@@ -1,0 +1,162 @@
+ticker,date,error,traceback
+MSFT,2026-03-18,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 209, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/graph/trading_graph.py"", line 261, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"
+BTC-USD,2026-02-27,[Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.json',"Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 210, in process_ticker
+    over_budget = cost_tracker.record(cb, ticker=ticker, trade_date=date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/utils/cost_tracker.py"", line 132, in record
+    _save(self.log_path, data)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/utils/cost_tracker.py"", line 55, in _save
+    tmp.replace(path)   # atomic rename
+  File ""/home/iislab/.local/share/uv/python/cpython-3.10.19-linux-aarch64-gnu/lib/python3.10/pathlib.py"", line 1247, in replace
+    self._accessor.replace(self, target)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.json'
+"
+NVDA,2026-01-05,"{'message': ""You passed 196609 input tokens and requested 65536 output tokens. However, the model's context length is only 262144 tokens, resulting in a maximum input length of 196608 tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=196609)"", 'code': 400}","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 209, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/graph/trading_graph.py"", line 261, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2436, in stream
+    for _ in runner.tick(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/runner.py"", line 161, in tick
+    run_with_retry(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/retry.py"", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 623, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 377, in invoke
+    ret = self.func(*args, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/agents/analysts/social_media_analyst.py"", line 48, in social_media_analyst_node
+    result = chain.invoke(state[""messages""])
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langchain_core/runnables/base.py"", line 3047, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langchain_core/runnables/base.py"", line 5431, in invoke
+    return self.bound.invoke(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 372, in invoke
+    self.generate_prompt(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 957, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 776, in generate
+    self._generate_with_cache(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 1022, in _generate_with_cache
+    result = self._generate(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langchain_openai/chat_models/base.py"", line 996, in _generate
+    return self._create_chat_result(response, generation_info)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langchain_openai/chat_models/base.py"", line 1037, in _create_chat_result
+    raise ValueError(response_dict.get(""error""))
+ValueError: {'message': ""You passed 196609 input tokens and requested 65536 output tokens. However, the model's context length is only 262144 tokens, resulting in a maximum input length of 196608 tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=196609)"", 'code': 400}
+"
+NVDA,2026-01-20,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 209, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/graph/trading_graph.py"", line 261, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"
+NVDA,2026-03-23,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 209, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/graph/trading_graph.py"", line 261, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"
+NVDA,2026-03-24,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 209, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/graph/trading_graph.py"", line 261, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"
+AAPL,2026-02-24,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 209, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/graph/trading_graph.py"", line 261, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"
+AAPL,2026-03-18,[Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.json',"Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 210, in process_ticker
+    over_budget = cost_tracker.record(cb, ticker=ticker, trade_date=date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/utils/cost_tracker.py"", line 132, in record
+    _save(self.log_path, data)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/utils/cost_tracker.py"", line 55, in _save
+    tmp.replace(path)   # atomic rename
+  File ""/home/iislab/.local/share/uv/python/cpython-3.10.19-linux-aarch64-gnu/lib/python3.10/pathlib.py"", line 1247, in replace
+    self._accessor.replace(self, target)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.json'
+"
+TSLA,2026-01-06,[Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.json',"Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 210, in process_ticker
+    over_budget = cost_tracker.record(cb, ticker=ticker, trade_date=date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/utils/cost_tracker.py"", line 132, in record
+    _save(self.log_path, data)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/utils/cost_tracker.py"", line 55, in _save
+    tmp.replace(path)   # atomic rename
+  File ""/home/iislab/.local/share/uv/python/cpython-3.10.19-linux-aarch64-gnu/lib/python3.10/pathlib.py"", line 1247, in replace
+    self._accessor.replace(self, target)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.tmp' -> '/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/logs/cost_log.json'
+"
+TSLA,2026-01-13,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 209, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/graph/trading_graph.py"", line 261, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"
+TSLA,2026-01-20,"Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/main_adversarial.py"", line 209, in process_ticker
+    _, decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/tradingagents/graph/trading_graph.py"", line 261, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/structural_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2456, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+"

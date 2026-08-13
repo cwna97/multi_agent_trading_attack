@@ -1,0 +1,34 @@
+{
+  "attack_name": "attack_01_data_poisoning",
+  "attack_config": {
+    "attack_type": "data_poisoning",
+    "target_action": "SELL",
+    "poison_strength": 0.8,
+    "noise_std": 0.1,
+    "preserve_consistency": true,
+    "poison_ratio": 0.1,
+    "poison_seed": null,
+    "enabled": true,
+    "attack_name": "attack_01_data_poisoning",
+    "description": "Replaces news headline/content with fabricated text matching target_action (sentiment score/label left untouched)",
+    "force_target_action": "BUY"
+  },
+  "date_range": {
+    "start": "2026-01-01",
+    "end": "2026-03-31"
+  },
+  "tickers": [
+    "AAPL"
+  ],
+  "metrics": {
+    "total_experiments": 61,
+    "successful_runs": 61,
+    "failed_runs": 0,
+    "comparable": 61,
+    "decision_changes": 40,
+    "target_action_achieved": 22,
+    "decision_change_rate": 65.57377049180327,
+    "attack_success_rate": 36.0655737704918
+  },
+  "timestamp": "2026-07-27T22:04:21.351781"
+}

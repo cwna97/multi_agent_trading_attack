@@ -1,0 +1,29 @@
+{
+  "attack_type": "persuasive_adversary",
+  "adversary_role": "bearish",
+  "target_agent": "bear_researcher",
+  "target_action": "SELL",
+  "persuasion_strength": "strong",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-03-31"
+  },
+  "tickers": [
+    "BTC-USD",
+    "MSFT",
+    "NVDA",
+    "TSLA",
+    "AAPL"
+  ],
+  "metrics": {
+    "total_experiments": 305,
+    "successful_runs": 303,
+    "failed_runs": 2,
+    "comparable": 303,
+    "decision_changes": 193,
+    "target_achieved": 248,
+    "decision_change_rate": 63.7,
+    "attack_success_rate": 81.8
+  },
+  "timestamp": "2026-07-30T05:59:14.670150"
+}

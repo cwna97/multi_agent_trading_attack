@@ -1,0 +1,102 @@
+ticker,date,error,traceback
+TSLA,2026-01-13,"Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/scripts/run_attack_01_data_poisoning.py"", line 231, in process_ticker
+    final_state, attack_decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/graph/attack_trading_graph.py"", line 264, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2436, in stream
+    for _ in runner.tick(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/runner.py"", line 161, in tick
+    run_with_retry(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/retry.py"", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 623, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 377, in invoke
+    ret = self.func(*args, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/agents/risk_mgmt/conservative_debator.py"", line 36, in safe_node
+    response = llm.invoke(prompt)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 372, in invoke
+    self.generate_prompt(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 957, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 776, in generate
+    self._generate_with_cache(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langchain_core/language_models/chat_models.py"", line 1022, in _generate_with_cache
+    result = self._generate(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langchain_openai/chat_models/base.py"", line 995, in _generate
+    response = self.client.create(**payload)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/_utils/_utils.py"", line 287, in wrapper
+    return func(*args, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py"", line 925, in create
+    return self._post(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/_base_client.py"", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/_base_client.py"", line 1037, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+"
+MSFT,2026-03-27,"Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/scripts/run_attack_01_data_poisoning.py"", line 231, in process_ticker
+    final_state, attack_decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/graph/attack_trading_graph.py"", line 264, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2436, in stream
+    for _ in runner.tick(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/runner.py"", line 161, in tick
+    run_with_retry(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/retry.py"", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 623, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 377, in invoke
+    ret = self.func(*args, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/agents/researchers/bear_researcher.py"", line 19, in bear_node
+    past_memories = memory.get_memories(curr_situation, n_matches=2)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/agents/utils/memory.py"", line 58, in get_memories
+    query_embedding = self.get_embedding(current_situation)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/agents/utils/memory.py"", line 28, in get_embedding
+    response = self.client.embeddings.create(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/resources/embeddings.py"", line 129, in create
+    return self._post(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/_base_client.py"", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/_base_client.py"", line 1037, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+"
+NVDA,2026-03-26,"Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}","Traceback (most recent call last):
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/scripts/run_attack_01_data_poisoning.py"", line 231, in process_ticker
+    final_state, attack_decision = ta.propagate(ticker, date_str)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/graph/attack_trading_graph.py"", line 264, in propagate
+    final_state = self.graph.invoke(init_agent_state, **args)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2719, in invoke
+    for chunk in self.stream(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/__init__.py"", line 2436, in stream
+    for _ in runner.tick(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/runner.py"", line 161, in tick
+    run_with_retry(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/pregel/retry.py"", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 623, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/langgraph/utils/runnable.py"", line 377, in invoke
+    ret = self.func(*args, **kwargs)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/agents/researchers/bull_researcher.py"", line 19, in bull_node
+    past_memories = memory.get_memories(curr_situation, n_matches=2)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/agents/utils/memory.py"", line 58, in get_memories
+    query_embedding = self.get_embedding(current_situation)
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/tradingagents/agents/utils/memory.py"", line 28, in get_embedding
+    response = self.client.embeddings.create(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/resources/embeddings.py"", line 129, in create
+    return self._post(
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/_base_client.py"", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File ""/home/iislab/workspace/nacw/multi_agents/mat_attack/role_attack/.venv/lib/python3.10/site-packages/openai/_base_client.py"", line 1037, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+"
