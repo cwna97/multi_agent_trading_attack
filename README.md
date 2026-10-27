@@ -1,7 +1,7 @@
 # MAT-Attack — Poisoning Agentic Alpha
 
 Code and data for the paper **"Poisoning Agentic Alpha: Adversarial Vulnerabilities
-Across Roles and Architectures in Multi-Agent Trading Systems"** (ICAIF '26).
+Across Roles and Architectures in Multi-Agent Trading Systems"** (Under review at WWW '27).
 
 A research framework for studying the **robustness and vulnerability of multi-agent
 LLM trading systems** under adversarial prompt-injection attacks. It is built on top of
